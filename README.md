@@ -1,2 +1,2 @@
 # IoT_Documentation
-Documentation on Kongifai Edge and IoT
+To Get Started with IoT Documentation on Kongifai Edge and IoT, go to 
