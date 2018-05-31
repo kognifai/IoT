@@ -20,3 +20,4 @@ The figure above, shows a deployment with an integrated connector which will pol
 ![Edge Gateway Distribution with MQTT Endpoint](https://github.com/kognifai/IoT_Documentation/blob/master/IoT_Images/Kgnifai%20Edge%20Gateway%20Distribution%20with%20MQTT%20endpoint.png?raw=true)
 
 The above figure shows a deployment where the connector SDK has used to write a custom/standalone connector, which talks to the Edge gateway over MQTT and sends packages serialized with protobuf. The Reliable transfer component will then transfer this data to the cloud.
+dsfs
