@@ -1,4 +1,4 @@
-Edge installations can be deployed in various configurations, depending on client requirements:
+# Edge installations can be deployed in various configurations, depending on client requirements:
 
 - A deployment can incorporate an edge gateway, a full storage solution, stream analytics and application framework /viewer.  
 - Most edge installations are more lightweight, and will only include the edge gateway. The Edge gateway will buffer sensor data and forward it to the cloud solution.
