@@ -1,4 +1,4 @@
-Welcome to the IoT_Documentation wiki! 
+Welcome to the IoT_Documentation! 
 
 Explore these pages to know more about **IoT** and **Edge Connectors**. 
 
