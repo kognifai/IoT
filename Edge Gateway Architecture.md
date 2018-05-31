@@ -1,5 +1,5 @@
 
-This article explains the components of Kognifai edge gateway and their placement in the edge gateway architecture.
+After reading this article you will get to know the components of Kognifai edge gateway and their placement in the edge gateway architecture.
 
  The following diagram illustrates how multiple components of the Kognifai edge gateway are distributed and communicate with each other in the edge gateway:
 
