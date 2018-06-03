@@ -1,6 +1,6 @@
 # Kognifai IoT Platform Architecture Overview
 
-![](https://github.com/kognifai/IoT_Documentation/blob/master/IoT_Images/Kognifai Iot Platform - platform overview.png?raw=true)
+![](https://github.com/kognifai/IoT/blob/master/IoT_Images/Kognifai%20Iot%20Platform%20-%20platform%20overview.png?raw=true)
 
 The Kognifai IoT Platform consists of a series of edge and cloud side components:
 
@@ -14,3 +14,4 @@ The Kognifai IoT Platform consists of a series of edge and cloud side components
 - Azure IoT hub is used to send push messages from the cloud to the device
 - Azure Event Hub is used for receving and relaying sensor data to cloud applications.
 - IoT Management Portal is used to approve new edge devices, push software updates to the edge devices and for remote configuration of the edge devices
+- Sensor Configuration Web Application is used to choose which of the sensors that are available we would like to replicate to the cloud

@@ -1,3 +1,5 @@
+# Edge Deployment models
+
 Edge installations can be deployed in various configurations, depending on client requirements:
 
 - A deployment can incorporate an edge gateway, a full storage solution, stream analytics and application framework /viewer.  
