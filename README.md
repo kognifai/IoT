@@ -11,6 +11,8 @@ In this section, we talk about:
 [Part and Parcel of Kognifai IoT platform](https://github.com/kognifai/IoT_Documentation/wiki#what-can-you-achieve-with-kognifai-iot-platform) 
 
 
+[Commonly used protocols and technologies in Kognifai IoT Platform and deployment](https://github.com/kognifai/IoT/commit/c750b9a848e91896cd52216ba00646e55198aac7)
+
 --------------------------------------------------------------------------------------------------------------------------
 # What is IoT ?
 
