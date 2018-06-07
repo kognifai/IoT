@@ -52,7 +52,7 @@ The Kognifai IoT platform will enable you to:
 - Monitor edge installations for intrusion attempts
 - Deploy storage, calculation and presentation capabilities at the Edge
     - it is possible to deploy the same storage and presentation tools both in the cloud and at the edge
--Reduce bandwith usage between edge locations and cloud due to the very efficient data compression methods used by Kognifai IoT Portal
+- Reduce bandwith usage between edge locations and cloud due to the very efficient data compression methods used by the Kognifai IoT Platform.
 
 ## Part and Parcel of Kognifai IoT platform
 
