@@ -1,0 +1,2 @@
+ExternalId,ExternalReadingType,TargetPath,TargetNodeDisplayName,ExternalPollFrequency,ExternalIndexDelayTimeSec,ExternalSensorColumnDescription,ExternalColumnMeasureunit,TargetColumnMeasureUnit
+SampleSet01,Instant,Edge/M2MqttExampleClient/EdgeGateway/SampleSet01,SampleSet01,1000,,WindSpeed10m,Speed:SI:m/s,Speed:SI:m/s
