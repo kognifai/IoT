@@ -1,0 +1,190 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.0": {
+      "CsvHelper/2.9.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40-client/CsvHelper.dll": {}
+        },
+        "runtime": {
+          "lib/net40-client/CsvHelper.dll": {}
+        }
+      },
+      "Kognifai.Edge.Serialization/1.1.0-alpha0043": {
+        "type": "package",
+        "dependencies": {
+          "protobuf-net": "2.3.2"
+        },
+        "compile": {
+          "lib/net40/Kognifai.Edge.Serialization.net40clients.dll": {},
+          "lib/net40/protobuf-net.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Kognifai.Edge.Serialization.net40clients.dll": {},
+          "lib/net40/protobuf-net.dll": {}
+        }
+      },
+      "Kognifai.M2Mqtt/1.1.0-alpha0008": {
+        "type": "package",
+        "compile": {
+          "lib/net40/M2Mqtt.Net40.dll": {}
+        },
+        "runtime": {
+          "lib/net40/M2Mqtt.Net40.dll": {}
+        }
+      },
+      "protobuf-net/2.3.2": {
+        "type": "package",
+        "compile": {
+          "lib/net40/protobuf-net.dll": {}
+        },
+        "runtime": {
+          "lib/net40/protobuf-net.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CsvHelper/2.9.1": {
+      "sha512": "CXPMEgvBtZaYi9o3Kxv2KRtYQnb7uYVP2HSJgwVjm3Gw89OlczwK5Ybq+PHey11Oqmo7m36i1wK/meSoRSj6Ow==",
+      "type": "package",
+      "path": "csvhelper/2.9.1",
+      "files": [
+        "csvhelper.2.9.1.nupkg.sha512",
+        "csvhelper.nuspec",
+        "lib/net20/CsvHelper.dll",
+        "lib/net20/CsvHelper.pdb",
+        "lib/net20/CsvHelper.xml",
+        "lib/net35-client/CsvHelper.dll",
+        "lib/net35-client/CsvHelper.pdb",
+        "lib/net35-client/CsvHelper.xml",
+        "lib/net40-client/CsvHelper.dll",
+        "lib/net40-client/CsvHelper.pdb",
+        "lib/net40-client/CsvHelper.xml",
+        "lib/portable-sl4+wp71+windows8+net40/CsvHelper.dll",
+        "lib/portable-sl4+wp71+windows8+net40/CsvHelper.pdb",
+        "lib/portable-sl4+wp71+windows8+net40/CsvHelper.xml"
+      ]
+    },
+    "Kognifai.Edge.Serialization/1.1.0-alpha0043": {
+      "sha512": "CibH6gzBc8qu+9ISSCvV2XlK7DaDw6oXH3FJeKUrx9hyFuK03xeCHMrpb6pc/5ncYOPNcEKkEadwp/Q1L+2k0g==",
+      "type": "package",
+      "path": "kognifai.edge.serialization/1.1.0-alpha0043",
+      "files": [
+        "kognifai.edge.serialization.1.1.0-alpha0043.nupkg.sha512",
+        "kognifai.edge.serialization.nuspec",
+        "lib/net40/Kognifai.Edge.Serialization.net40clients.dll",
+        "lib/net40/Kognifai.Edge.Serialization.net40clients.pdb",
+        "lib/net40/protobuf-net.dll",
+        "lib/net462/Kognifai.Edge.Serialization.deps.json",
+        "lib/net462/Kognifai.Edge.Serialization.dll",
+        "lib/net462/Kognifai.Edge.Serialization.pdb",
+        "lib/net471/Kognifai.Edge.Serialization.deps.json",
+        "lib/net471/Kognifai.Edge.Serialization.dll",
+        "lib/net471/Kognifai.Edge.Serialization.pdb",
+        "lib/netstandard2.0/Kognifai.Edge.Serialization.deps.json",
+        "lib/netstandard2.0/Kognifai.Edge.Serialization.dll",
+        "lib/netstandard2.0/Kognifai.Edge.Serialization.pdb"
+      ]
+    },
+    "Kognifai.M2Mqtt/1.1.0-alpha0008": {
+      "sha512": "AZhBNe1ox7d5iR/oMFkYwaMopiYFSW7hZ4V2rABlezQdxyVOlh6OCqLRrSIQao5PN9BNGRjEq/hNYcezy/caRQ==",
+      "type": "package",
+      "path": "kognifai.m2mqtt/1.1.0-alpha0008",
+      "files": [
+        "kognifai.m2mqtt.1.1.0-alpha0008.nupkg.sha512",
+        "kognifai.m2mqtt.nuspec",
+        "lib/net40/M2Mqtt.Net40.dll",
+        "lib/net40/M2Mqtt.Net40.pdb",
+        "lib/net462/M2Mqtt.Net.dll",
+        "lib/net462/M2Mqtt.Net.pdb"
+      ]
+    },
+    "protobuf-net/2.3.2": {
+      "sha512": "QyTFEJaF0scH/Vnpk75z/eOcnuhJMWY3xZ9sSnce4E7cCRIzi+3RN5J6ldFXwrxRdwH5La85wtrklaQwVkZnsQ==",
+      "type": "package",
+      "path": "protobuf-net/2.3.2",
+      "files": [
+        "lib/net20/protobuf-net.dll",
+        "lib/net20/protobuf-net.xml",
+        "lib/net35/protobuf-net.dll",
+        "lib/net35/protobuf-net.xml",
+        "lib/net40/protobuf-net.dll",
+        "lib/net40/protobuf-net.xml",
+        "lib/netstandard1.3/protobuf-net.dll",
+        "lib/netstandard1.3/protobuf-net.xml",
+        "protobuf-net.2.3.2.nupkg.sha512",
+        "protobuf-net.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.0": [
+      "CsvHelper >= 2.9.1",
+      "Kognifai.Edge.Serialization >= 1.1.0-alpha0043",
+      "Kognifai.M2Mqtt >= 1.1.0-alpha0008"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\devarp\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
+    "restore": {
+      "projectUniqueName": "C:\\Users\\devarp\\Source\\Repos\\IoT\\M2MqttExampleClient\\M2MqttClient40\\M2MqttExampleClient40.csproj",
+      "projectName": "M2MqttExampleClient40",
+      "projectPath": "C:\\Users\\devarp\\Source\\Repos\\IoT\\M2MqttExampleClient\\M2MqttClient40\\M2MqttExampleClient40.csproj",
+      "packagesPath": "C:\\Users\\devarp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\devarp\\Source\\Repos\\IoT\\M2MqttExampleClient\\M2MqttClient40\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\devarp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net40"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://kdi.jfrog.io/kdi/api/nuget/nuget": {}
+      },
+      "frameworks": {
+        "net40": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net40": {
+        "dependencies": {
+          "Kognifai.Edge.Serialization": {
+            "target": "Package",
+            "version": "1.1.0-alpha0043"
+          },
+          "CsvHelper": {
+            "target": "Package",
+            "version": "2.9.1"
+          },
+          "Kognifai.M2Mqtt": {
+            "target": "Package",
+            "version": "1.1.0-alpha0008"
+          }
+        }
+      }
+    }
+  }
+}
