@@ -30,7 +30,7 @@ See also:
 - [Connector SDK](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/Kognifai%20Connector%20SDK%20Overview.md)
 
 --------------------------------------------------------------------------------------------------------------------------
-# What is IoT ?
+# What is IoT ?    [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
 The Internet of things (IoT) is the inter-networking of physical devices, vehicles, buildings, and other items, embedded with electronics, software, sensors, actuators, and network connectivity that enable them to collect and exchange data. IoT Platforms form the basis for development of scalable IoT applications and services that connect the real and virtual worlds between those physical devices, systems and people. The Kognifai IoT platform is includes  software running at the edge, integrating the edge systems with the cloud, and also the tools in the cloud required to securely manage your edge installations in a safe and secure manner.
 
