@@ -1,0 +1,3 @@
+ExternalId,ExternalReadingType,TargetPath,TargetNodeDisplayName,ExternalPollFrequency,ExternalIndexDelayTimeSec,ExternalSensorColumnDescription,ExternalColumnMeasureunit,TargetColumnMeasureUnit
+TimeSeries01,Instant,Edge/M2MqttExampleClient/EdgeGateway/TimeSeries01,TimeSeries01,1000,,Timeseries test 01,Numeral:AH:cnt,Numeral:AH:cnt
+

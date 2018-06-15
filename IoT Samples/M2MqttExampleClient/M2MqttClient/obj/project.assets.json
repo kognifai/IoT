@@ -1,0 +1,840 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.2": {
+      "CsvHelper/2.16.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net45/CsvHelper.dll": {}
+        },
+        "runtime": {
+          "lib/net45/CsvHelper.dll": {}
+        }
+      },
+      "Google.Protobuf/3.4.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Google.Protobuf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Google.Protobuf.dll": {}
+        }
+      },
+      "Google.Protobuf.Tools/3.4.0": {
+        "type": "package"
+      },
+      "Kognifai.CloudServices.Shared/1.1.0-alpha0112": {
+        "type": "package",
+        "dependencies": {
+          "CsvHelper": "2.16.3",
+          "Google.Protobuf": "3.4.1",
+          "Kognifai.Edge.Shared.GaloreClients": "1.1.0-alpha0002"
+        },
+        "compile": {
+          "lib/net462/Kognifai.CloudGateway.Common.dll": {},
+          "lib/net462/Kognifai.CloudGateway.Definitions.dll": {}
+        },
+        "runtime": {
+          "lib/net462/Kognifai.CloudGateway.Common.dll": {},
+          "lib/net462/Kognifai.CloudGateway.Definitions.dll": {}
+        }
+      },
+      "Kognifai.Edge.Serialization/1.1.0-alpha0043": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.4.1",
+          "Google.Protobuf.Tools": "3.4.0"
+        },
+        "compile": {
+          "lib/net462/Kognifai.Edge.Serialization.dll": {}
+        },
+        "runtime": {
+          "lib/net462/Kognifai.Edge.Serialization.dll": {}
+        }
+      },
+      "Kognifai.Edge.Shared.GaloreClients/1.1.0-alpha0002": {
+        "type": "package",
+        "dependencies": {
+          "Kognifai.Galore.Shared.DataContracts": "1.1.0",
+          "Kognifai.Galore.Shared.ServiceClients": "1.1.0",
+          "log4net": "2.0.8",
+          "morelinq": "2.6.0"
+        },
+        "compile": {
+          "lib/net462/Google.Protobuf.dll": {},
+          "lib/net462/Kognifai.Edge.Serialization.dll": {},
+          "lib/net462/Kognifai.Edge.Shared.GaloreClients.Definitions.dll": {},
+          "lib/net462/Kognifai.Edge.Shared.GaloreClients.dll": {},
+          "lib/net462/Kognifai.Edge.Shared.dll": {},
+          "lib/net462/Kognifai.Galore.Shared.Assets.dll": {},
+          "lib/net462/Kognifai.Galore.Shared.DataContracts.dll": {},
+          "lib/net462/Kognifai.Galore.Shared.Series.dll": {},
+          "lib/net462/Kognifai.Galore.Shared.ServiceClients.dll": {},
+          "lib/net462/Microsoft.Win32.Primitives.dll": {},
+          "lib/net462/MoreLinq.dll": {},
+          "lib/net462/Newtonsoft.Json.dll": {},
+          "lib/net462/SimpleInjector.dll": {},
+          "lib/net462/System.AppContext.dll": {},
+          "lib/net462/System.Collections.Concurrent.dll": {},
+          "lib/net462/System.Collections.NonGeneric.dll": {},
+          "lib/net462/System.Collections.Specialized.dll": {},
+          "lib/net462/System.Collections.dll": {},
+          "lib/net462/System.ComponentModel.EventBasedAsync.dll": {},
+          "lib/net462/System.ComponentModel.Primitives.dll": {},
+          "lib/net462/System.ComponentModel.TypeConverter.dll": {},
+          "lib/net462/System.ComponentModel.dll": {},
+          "lib/net462/System.Configuration.ConfigurationManager.dll": {},
+          "lib/net462/System.Console.dll": {},
+          "lib/net462/System.Data.Common.dll": {},
+          "lib/net462/System.Diagnostics.Contracts.dll": {},
+          "lib/net462/System.Diagnostics.Debug.dll": {},
+          "lib/net462/System.Diagnostics.FileVersionInfo.dll": {},
+          "lib/net462/System.Diagnostics.Process.dll": {},
+          "lib/net462/System.Diagnostics.StackTrace.dll": {},
+          "lib/net462/System.Diagnostics.TextWriterTraceListener.dll": {},
+          "lib/net462/System.Diagnostics.Tools.dll": {},
+          "lib/net462/System.Diagnostics.TraceSource.dll": {},
+          "lib/net462/System.Diagnostics.Tracing.dll": {},
+          "lib/net462/System.Drawing.Primitives.dll": {},
+          "lib/net462/System.Dynamic.Runtime.dll": {},
+          "lib/net462/System.Globalization.Calendars.dll": {},
+          "lib/net462/System.Globalization.Extensions.dll": {},
+          "lib/net462/System.Globalization.dll": {},
+          "lib/net462/System.IO.Compression.ZipFile.dll": {},
+          "lib/net462/System.IO.Compression.dll": {},
+          "lib/net462/System.IO.FileSystem.DriveInfo.dll": {},
+          "lib/net462/System.IO.FileSystem.Primitives.dll": {},
+          "lib/net462/System.IO.FileSystem.Watcher.dll": {},
+          "lib/net462/System.IO.FileSystem.dll": {},
+          "lib/net462/System.IO.IsolatedStorage.dll": {},
+          "lib/net462/System.IO.MemoryMappedFiles.dll": {},
+          "lib/net462/System.IO.Pipes.dll": {},
+          "lib/net462/System.IO.UnmanagedMemoryStream.dll": {},
+          "lib/net462/System.IO.dll": {},
+          "lib/net462/System.Linq.Expressions.dll": {},
+          "lib/net462/System.Linq.Parallel.dll": {},
+          "lib/net462/System.Linq.Queryable.dll": {},
+          "lib/net462/System.Linq.dll": {},
+          "lib/net462/System.Net.Http.dll": {},
+          "lib/net462/System.Net.NameResolution.dll": {},
+          "lib/net462/System.Net.NetworkInformation.dll": {},
+          "lib/net462/System.Net.Ping.dll": {},
+          "lib/net462/System.Net.Primitives.dll": {},
+          "lib/net462/System.Net.Requests.dll": {},
+          "lib/net462/System.Net.Security.dll": {},
+          "lib/net462/System.Net.Sockets.dll": {},
+          "lib/net462/System.Net.WebHeaderCollection.dll": {},
+          "lib/net462/System.Net.WebSockets.Client.dll": {},
+          "lib/net462/System.Net.WebSockets.dll": {},
+          "lib/net462/System.ObjectModel.dll": {},
+          "lib/net462/System.Reactive.Core.dll": {},
+          "lib/net462/System.Reactive.Interfaces.dll": {},
+          "lib/net462/System.Reactive.Linq.dll": {},
+          "lib/net462/System.Reactive.PlatformServices.dll": {},
+          "lib/net462/System.Reactive.Windows.Threading.dll": {},
+          "lib/net462/System.Reflection.Extensions.dll": {},
+          "lib/net462/System.Reflection.Primitives.dll": {},
+          "lib/net462/System.Reflection.dll": {},
+          "lib/net462/System.Resources.Reader.dll": {},
+          "lib/net462/System.Resources.ResourceManager.dll": {},
+          "lib/net462/System.Resources.Writer.dll": {},
+          "lib/net462/System.Runtime.CompilerServices.VisualC.dll": {},
+          "lib/net462/System.Runtime.Extensions.dll": {},
+          "lib/net462/System.Runtime.Handles.dll": {},
+          "lib/net462/System.Runtime.InteropServices.RuntimeInformation.dll": {},
+          "lib/net462/System.Runtime.InteropServices.dll": {},
+          "lib/net462/System.Runtime.Numerics.dll": {},
+          "lib/net462/System.Runtime.Serialization.Formatters.dll": {},
+          "lib/net462/System.Runtime.Serialization.Json.dll": {},
+          "lib/net462/System.Runtime.Serialization.Primitives.dll": {},
+          "lib/net462/System.Runtime.Serialization.Xml.dll": {},
+          "lib/net462/System.Runtime.dll": {},
+          "lib/net462/System.Security.Claims.dll": {},
+          "lib/net462/System.Security.Cryptography.Algorithms.dll": {},
+          "lib/net462/System.Security.Cryptography.Csp.dll": {},
+          "lib/net462/System.Security.Cryptography.Encoding.dll": {},
+          "lib/net462/System.Security.Cryptography.Primitives.dll": {},
+          "lib/net462/System.Security.Cryptography.X509Certificates.dll": {},
+          "lib/net462/System.Security.Principal.dll": {},
+          "lib/net462/System.Security.SecureString.dll": {},
+          "lib/net462/System.Text.Encoding.Extensions.dll": {},
+          "lib/net462/System.Text.Encoding.dll": {},
+          "lib/net462/System.Text.RegularExpressions.dll": {},
+          "lib/net462/System.Threading.Overlapped.dll": {},
+          "lib/net462/System.Threading.Tasks.Parallel.dll": {},
+          "lib/net462/System.Threading.Tasks.dll": {},
+          "lib/net462/System.Threading.Thread.dll": {},
+          "lib/net462/System.Threading.ThreadPool.dll": {},
+          "lib/net462/System.Threading.Timer.dll": {},
+          "lib/net462/System.Threading.dll": {},
+          "lib/net462/System.ValueTuple.dll": {},
+          "lib/net462/System.Xml.ReaderWriter.dll": {},
+          "lib/net462/System.Xml.XDocument.dll": {},
+          "lib/net462/System.Xml.XPath.XDocument.dll": {},
+          "lib/net462/System.Xml.XPath.dll": {},
+          "lib/net462/System.Xml.XmlDocument.dll": {},
+          "lib/net462/System.Xml.XmlSerializer.dll": {},
+          "lib/net462/log4net.dll": {},
+          "lib/net462/netstandard.dll": {}
+        },
+        "runtime": {
+          "lib/net462/Google.Protobuf.dll": {},
+          "lib/net462/Kognifai.Edge.Serialization.dll": {},
+          "lib/net462/Kognifai.Edge.Shared.GaloreClients.Definitions.dll": {},
+          "lib/net462/Kognifai.Edge.Shared.GaloreClients.dll": {},
+          "lib/net462/Kognifai.Edge.Shared.dll": {},
+          "lib/net462/Kognifai.Galore.Shared.Assets.dll": {},
+          "lib/net462/Kognifai.Galore.Shared.DataContracts.dll": {},
+          "lib/net462/Kognifai.Galore.Shared.Series.dll": {},
+          "lib/net462/Kognifai.Galore.Shared.ServiceClients.dll": {},
+          "lib/net462/Microsoft.Win32.Primitives.dll": {},
+          "lib/net462/MoreLinq.dll": {},
+          "lib/net462/Newtonsoft.Json.dll": {},
+          "lib/net462/SimpleInjector.dll": {},
+          "lib/net462/System.AppContext.dll": {},
+          "lib/net462/System.Collections.Concurrent.dll": {},
+          "lib/net462/System.Collections.NonGeneric.dll": {},
+          "lib/net462/System.Collections.Specialized.dll": {},
+          "lib/net462/System.Collections.dll": {},
+          "lib/net462/System.ComponentModel.EventBasedAsync.dll": {},
+          "lib/net462/System.ComponentModel.Primitives.dll": {},
+          "lib/net462/System.ComponentModel.TypeConverter.dll": {},
+          "lib/net462/System.ComponentModel.dll": {},
+          "lib/net462/System.Configuration.ConfigurationManager.dll": {},
+          "lib/net462/System.Console.dll": {},
+          "lib/net462/System.Data.Common.dll": {},
+          "lib/net462/System.Diagnostics.Contracts.dll": {},
+          "lib/net462/System.Diagnostics.Debug.dll": {},
+          "lib/net462/System.Diagnostics.FileVersionInfo.dll": {},
+          "lib/net462/System.Diagnostics.Process.dll": {},
+          "lib/net462/System.Diagnostics.StackTrace.dll": {},
+          "lib/net462/System.Diagnostics.TextWriterTraceListener.dll": {},
+          "lib/net462/System.Diagnostics.Tools.dll": {},
+          "lib/net462/System.Diagnostics.TraceSource.dll": {},
+          "lib/net462/System.Diagnostics.Tracing.dll": {},
+          "lib/net462/System.Drawing.Primitives.dll": {},
+          "lib/net462/System.Dynamic.Runtime.dll": {},
+          "lib/net462/System.Globalization.Calendars.dll": {},
+          "lib/net462/System.Globalization.Extensions.dll": {},
+          "lib/net462/System.Globalization.dll": {},
+          "lib/net462/System.IO.Compression.ZipFile.dll": {},
+          "lib/net462/System.IO.Compression.dll": {},
+          "lib/net462/System.IO.FileSystem.DriveInfo.dll": {},
+          "lib/net462/System.IO.FileSystem.Primitives.dll": {},
+          "lib/net462/System.IO.FileSystem.Watcher.dll": {},
+          "lib/net462/System.IO.FileSystem.dll": {},
+          "lib/net462/System.IO.IsolatedStorage.dll": {},
+          "lib/net462/System.IO.MemoryMappedFiles.dll": {},
+          "lib/net462/System.IO.Pipes.dll": {},
+          "lib/net462/System.IO.UnmanagedMemoryStream.dll": {},
+          "lib/net462/System.IO.dll": {},
+          "lib/net462/System.Linq.Expressions.dll": {},
+          "lib/net462/System.Linq.Parallel.dll": {},
+          "lib/net462/System.Linq.Queryable.dll": {},
+          "lib/net462/System.Linq.dll": {},
+          "lib/net462/System.Net.Http.dll": {},
+          "lib/net462/System.Net.NameResolution.dll": {},
+          "lib/net462/System.Net.NetworkInformation.dll": {},
+          "lib/net462/System.Net.Ping.dll": {},
+          "lib/net462/System.Net.Primitives.dll": {},
+          "lib/net462/System.Net.Requests.dll": {},
+          "lib/net462/System.Net.Security.dll": {},
+          "lib/net462/System.Net.Sockets.dll": {},
+          "lib/net462/System.Net.WebHeaderCollection.dll": {},
+          "lib/net462/System.Net.WebSockets.Client.dll": {},
+          "lib/net462/System.Net.WebSockets.dll": {},
+          "lib/net462/System.ObjectModel.dll": {},
+          "lib/net462/System.Reactive.Core.dll": {},
+          "lib/net462/System.Reactive.Interfaces.dll": {},
+          "lib/net462/System.Reactive.Linq.dll": {},
+          "lib/net462/System.Reactive.PlatformServices.dll": {},
+          "lib/net462/System.Reactive.Windows.Threading.dll": {},
+          "lib/net462/System.Reflection.Extensions.dll": {},
+          "lib/net462/System.Reflection.Primitives.dll": {},
+          "lib/net462/System.Reflection.dll": {},
+          "lib/net462/System.Resources.Reader.dll": {},
+          "lib/net462/System.Resources.ResourceManager.dll": {},
+          "lib/net462/System.Resources.Writer.dll": {},
+          "lib/net462/System.Runtime.CompilerServices.VisualC.dll": {},
+          "lib/net462/System.Runtime.Extensions.dll": {},
+          "lib/net462/System.Runtime.Handles.dll": {},
+          "lib/net462/System.Runtime.InteropServices.RuntimeInformation.dll": {},
+          "lib/net462/System.Runtime.InteropServices.dll": {},
+          "lib/net462/System.Runtime.Numerics.dll": {},
+          "lib/net462/System.Runtime.Serialization.Formatters.dll": {},
+          "lib/net462/System.Runtime.Serialization.Json.dll": {},
+          "lib/net462/System.Runtime.Serialization.Primitives.dll": {},
+          "lib/net462/System.Runtime.Serialization.Xml.dll": {},
+          "lib/net462/System.Runtime.dll": {},
+          "lib/net462/System.Security.Claims.dll": {},
+          "lib/net462/System.Security.Cryptography.Algorithms.dll": {},
+          "lib/net462/System.Security.Cryptography.Csp.dll": {},
+          "lib/net462/System.Security.Cryptography.Encoding.dll": {},
+          "lib/net462/System.Security.Cryptography.Primitives.dll": {},
+          "lib/net462/System.Security.Cryptography.X509Certificates.dll": {},
+          "lib/net462/System.Security.Principal.dll": {},
+          "lib/net462/System.Security.SecureString.dll": {},
+          "lib/net462/System.Text.Encoding.Extensions.dll": {},
+          "lib/net462/System.Text.Encoding.dll": {},
+          "lib/net462/System.Text.RegularExpressions.dll": {},
+          "lib/net462/System.Threading.Overlapped.dll": {},
+          "lib/net462/System.Threading.Tasks.Parallel.dll": {},
+          "lib/net462/System.Threading.Tasks.dll": {},
+          "lib/net462/System.Threading.Thread.dll": {},
+          "lib/net462/System.Threading.ThreadPool.dll": {},
+          "lib/net462/System.Threading.Timer.dll": {},
+          "lib/net462/System.Threading.dll": {},
+          "lib/net462/System.ValueTuple.dll": {},
+          "lib/net462/System.Xml.ReaderWriter.dll": {},
+          "lib/net462/System.Xml.XDocument.dll": {},
+          "lib/net462/System.Xml.XPath.XDocument.dll": {},
+          "lib/net462/System.Xml.XPath.dll": {},
+          "lib/net462/System.Xml.XmlDocument.dll": {},
+          "lib/net462/System.Xml.XmlSerializer.dll": {},
+          "lib/net462/log4net.dll": {},
+          "lib/net462/netstandard.dll": {}
+        }
+      },
+      "Kognifai.Galore.Shared.Assets/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Kognifai.Galore.Shared.Series": "1.1.0"
+        },
+        "compile": {
+          "lib/net46/Kognifai.Galore.Shared.Assets.dll": {}
+        },
+        "runtime": {
+          "lib/net46/Kognifai.Galore.Shared.Assets.dll": {}
+        }
+      },
+      "Kognifai.Galore.Shared.DataContracts/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Kognifai.Galore.Shared.Assets": "1.1.0"
+        },
+        "compile": {
+          "lib/net46/Kognifai.Galore.Shared.DataContracts.dll": {}
+        },
+        "runtime": {
+          "lib/net46/Kognifai.Galore.Shared.DataContracts.dll": {}
+        }
+      },
+      "Kognifai.Galore.Shared.Series/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "lib/net45/Kognifai.Galore.Shared.Series.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Kognifai.Galore.Shared.Series.dll": {}
+        }
+      },
+      "Kognifai.Galore.Shared.ServiceClients/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Kognifai.Galore.Shared.Assets": "1.1.0",
+          "Kognifai.Galore.Shared.DataContracts": "1.1.0"
+        },
+        "frameworkAssemblies": [
+          "System.ServiceModel"
+        ],
+        "compile": {
+          "lib/net46/Kognifai.Galore.Shared.ServiceClients.dll": {}
+        },
+        "runtime": {
+          "lib/net46/Kognifai.Galore.Shared.ServiceClients.dll": {}
+        }
+      },
+      "Kognifai.M2Mqtt/1.1.0-alpha0008": {
+        "type": "package",
+        "compile": {
+          "lib/net462/M2Mqtt.Net.dll": {}
+        },
+        "runtime": {
+          "lib/net462/M2Mqtt.Net.dll": {}
+        }
+      },
+      "log4net/2.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net45-full/log4net.dll": {}
+        },
+        "runtime": {
+          "lib/net45-full/log4net.dll": {}
+        }
+      },
+      "morelinq/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.3.0"
+        },
+        "compile": {
+          "lib/net40/MoreLinq.dll": {}
+        },
+        "runtime": {
+          "lib/net40/MoreLinq.dll": {}
+        }
+      },
+      "Newtonsoft.Json/10.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "System.ValueTuple/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CsvHelper/2.16.3": {
+      "sha512": "RTxNM9Q6MDg3WpGorrK7E9eXsjGhtDLYx5dBuHol5kHDpu7kND2NveHDVCFQgGxowuDB57ettaOEn3EJqiJ1oQ==",
+      "type": "package",
+      "path": "csvhelper/2.16.3",
+      "files": [
+        "csvhelper.2.16.3.nupkg.sha512",
+        "csvhelper.nuspec",
+        "lib/net20/CsvHelper.dll",
+        "lib/net20/CsvHelper.xml",
+        "lib/net35/CsvHelper.dll",
+        "lib/net35/CsvHelper.xml",
+        "lib/net40/CsvHelper.dll",
+        "lib/net40/CsvHelper.xml",
+        "lib/net45/CsvHelper.dll",
+        "lib/net45/CsvHelper.xml",
+        "lib/netstandard1.3/CsvHelper.dll",
+        "lib/netstandard1.3/CsvHelper.xml",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/CsvHelper.dll",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/CsvHelper.xml"
+      ]
+    },
+    "Google.Protobuf/3.4.1": {
+      "sha512": "whGnxrX8cgAwbhyP/NhnMtWMd4b+ewOeujl7WVtsrtkPiJrIK2BZLOjfgDPB8im9mPMRebWT/RE/1lJCvDsMuQ==",
+      "type": "package",
+      "path": "google.protobuf/3.4.1",
+      "files": [
+        "google.protobuf.3.4.1.nupkg.sha512",
+        "google.protobuf.nuspec",
+        "lib/net45/Google.Protobuf.dll",
+        "lib/net45/Google.Protobuf.xml",
+        "lib/netstandard1.0/Google.Protobuf.dll",
+        "lib/netstandard1.0/Google.Protobuf.xml"
+      ]
+    },
+    "Google.Protobuf.Tools/3.4.0": {
+      "sha512": "v2H1wjioMa9HQMz/ke7KKWT3kVFjeYtO/jPVaCY0Tdd9QMJTqsOBA4tP+0egs9YcnYe66d3tdIxY3/mCzOml6A==",
+      "type": "package",
+      "path": "google.protobuf.tools/3.4.0",
+      "files": [
+        "google.protobuf.tools.3.4.0.nupkg.sha512",
+        "google.protobuf.tools.nuspec",
+        "tools/google/protobuf/any.proto",
+        "tools/google/protobuf/api.proto",
+        "tools/google/protobuf/descriptor.proto",
+        "tools/google/protobuf/duration.proto",
+        "tools/google/protobuf/empty.proto",
+        "tools/google/protobuf/field_mask.proto",
+        "tools/google/protobuf/source_context.proto",
+        "tools/google/protobuf/struct.proto",
+        "tools/google/protobuf/timestamp.proto",
+        "tools/google/protobuf/type.proto",
+        "tools/google/protobuf/wrappers.proto",
+        "tools/linux_x64/protoc",
+        "tools/linux_x86/protoc",
+        "tools/macosx_x64/protoc",
+        "tools/macosx_x86/protoc",
+        "tools/windows_x64/protoc.exe",
+        "tools/windows_x86/protoc.exe"
+      ]
+    },
+    "Kognifai.CloudServices.Shared/1.1.0-alpha0112": {
+      "sha512": "4QnY9MaH6ezbg0KtAp8URao4TlPfwUmwJUsWFe/HjQsDsaay6y9KoxdszsOK+sGHBrMD9Bmcl+jM9OiUO63kuQ==",
+      "type": "package",
+      "path": "kognifai.cloudservices.shared/1.1.0-alpha0112",
+      "files": [
+        "kognifai.cloudservices.shared.1.1.0-alpha0112.nupkg.sha512",
+        "kognifai.cloudservices.shared.nuspec",
+        "lib/net462/Kognifai.CloudGateway.Common.deps.json",
+        "lib/net462/Kognifai.CloudGateway.Common.dll",
+        "lib/net462/Kognifai.CloudGateway.Common.dll.config",
+        "lib/net462/Kognifai.CloudGateway.Common.pdb",
+        "lib/net462/Kognifai.CloudGateway.Definitions.dll",
+        "lib/net462/Kognifai.CloudGateway.Definitions.pdb",
+        "lib/netstandard2.0/Kognifai.CloudGateway.Common.deps.json",
+        "lib/netstandard2.0/Kognifai.CloudGateway.Common.dll",
+        "lib/netstandard2.0/Kognifai.CloudGateway.Common.dll.config",
+        "lib/netstandard2.0/Kognifai.CloudGateway.Common.pdb",
+        "lib/netstandard2.0/Kognifai.CloudGateway.Definitions.dll",
+        "lib/netstandard2.0/Kognifai.CloudGateway.Definitions.pdb"
+      ]
+    },
+    "Kognifai.Edge.Serialization/1.1.0-alpha0043": {
+      "sha512": "CibH6gzBc8qu+9ISSCvV2XlK7DaDw6oXH3FJeKUrx9hyFuK03xeCHMrpb6pc/5ncYOPNcEKkEadwp/Q1L+2k0g==",
+      "type": "package",
+      "path": "kognifai.edge.serialization/1.1.0-alpha0043",
+      "files": [
+        "kognifai.edge.serialization.1.1.0-alpha0043.nupkg.sha512",
+        "kognifai.edge.serialization.nuspec",
+        "lib/net40/Kognifai.Edge.Serialization.net40clients.dll",
+        "lib/net40/Kognifai.Edge.Serialization.net40clients.pdb",
+        "lib/net40/protobuf-net.dll",
+        "lib/net462/Kognifai.Edge.Serialization.deps.json",
+        "lib/net462/Kognifai.Edge.Serialization.dll",
+        "lib/net462/Kognifai.Edge.Serialization.pdb",
+        "lib/net471/Kognifai.Edge.Serialization.deps.json",
+        "lib/net471/Kognifai.Edge.Serialization.dll",
+        "lib/net471/Kognifai.Edge.Serialization.pdb",
+        "lib/netstandard2.0/Kognifai.Edge.Serialization.deps.json",
+        "lib/netstandard2.0/Kognifai.Edge.Serialization.dll",
+        "lib/netstandard2.0/Kognifai.Edge.Serialization.pdb"
+      ]
+    },
+    "Kognifai.Edge.Shared.GaloreClients/1.1.0-alpha0002": {
+      "sha512": "hOZps9sQdaNEjSxgybtXyVJBWxg4eNTNFsU01b4tPHo43LVWWvHwbjPIcOls/OsZnven9n9HMbTwKWD3gvPOeg==",
+      "type": "package",
+      "path": "kognifai.edge.shared.galoreclients/1.1.0-alpha0002",
+      "files": [
+        "kognifai.edge.shared.galoreclients.1.1.0-alpha0002.nupkg.sha512",
+        "kognifai.edge.shared.galoreclients.nuspec",
+        "lib/net462/Google.Protobuf.dll",
+        "lib/net462/Kognifai.Edge.Serialization.dll",
+        "lib/net462/Kognifai.Edge.Shared.GaloreClients.Definitions.dll",
+        "lib/net462/Kognifai.Edge.Shared.GaloreClients.Definitions.pdb",
+        "lib/net462/Kognifai.Edge.Shared.GaloreClients.dll",
+        "lib/net462/Kognifai.Edge.Shared.GaloreClients.pdb",
+        "lib/net462/Kognifai.Edge.Shared.dll",
+        "lib/net462/Kognifai.Edge.Shared.pdb",
+        "lib/net462/Kognifai.Galore.Shared.Assets.dll",
+        "lib/net462/Kognifai.Galore.Shared.DataContracts.dll",
+        "lib/net462/Kognifai.Galore.Shared.Series.dll",
+        "lib/net462/Kognifai.Galore.Shared.ServiceClients.dll",
+        "lib/net462/Microsoft.Win32.Primitives.dll",
+        "lib/net462/MoreLinq.dll",
+        "lib/net462/Newtonsoft.Json.dll",
+        "lib/net462/SimpleInjector.dll",
+        "lib/net462/System.AppContext.dll",
+        "lib/net462/System.Collections.Concurrent.dll",
+        "lib/net462/System.Collections.NonGeneric.dll",
+        "lib/net462/System.Collections.Specialized.dll",
+        "lib/net462/System.Collections.dll",
+        "lib/net462/System.ComponentModel.EventBasedAsync.dll",
+        "lib/net462/System.ComponentModel.Primitives.dll",
+        "lib/net462/System.ComponentModel.TypeConverter.dll",
+        "lib/net462/System.ComponentModel.dll",
+        "lib/net462/System.Configuration.ConfigurationManager.dll",
+        "lib/net462/System.Console.dll",
+        "lib/net462/System.Data.Common.dll",
+        "lib/net462/System.Diagnostics.Contracts.dll",
+        "lib/net462/System.Diagnostics.Debug.dll",
+        "lib/net462/System.Diagnostics.FileVersionInfo.dll",
+        "lib/net462/System.Diagnostics.Process.dll",
+        "lib/net462/System.Diagnostics.StackTrace.dll",
+        "lib/net462/System.Diagnostics.TextWriterTraceListener.dll",
+        "lib/net462/System.Diagnostics.Tools.dll",
+        "lib/net462/System.Diagnostics.TraceSource.dll",
+        "lib/net462/System.Diagnostics.Tracing.dll",
+        "lib/net462/System.Drawing.Primitives.dll",
+        "lib/net462/System.Dynamic.Runtime.dll",
+        "lib/net462/System.Globalization.Calendars.dll",
+        "lib/net462/System.Globalization.Extensions.dll",
+        "lib/net462/System.Globalization.dll",
+        "lib/net462/System.IO.Compression.ZipFile.dll",
+        "lib/net462/System.IO.Compression.dll",
+        "lib/net462/System.IO.FileSystem.DriveInfo.dll",
+        "lib/net462/System.IO.FileSystem.Primitives.dll",
+        "lib/net462/System.IO.FileSystem.Watcher.dll",
+        "lib/net462/System.IO.FileSystem.dll",
+        "lib/net462/System.IO.IsolatedStorage.dll",
+        "lib/net462/System.IO.MemoryMappedFiles.dll",
+        "lib/net462/System.IO.Pipes.dll",
+        "lib/net462/System.IO.UnmanagedMemoryStream.dll",
+        "lib/net462/System.IO.dll",
+        "lib/net462/System.Linq.Expressions.dll",
+        "lib/net462/System.Linq.Parallel.dll",
+        "lib/net462/System.Linq.Queryable.dll",
+        "lib/net462/System.Linq.dll",
+        "lib/net462/System.Net.Http.dll",
+        "lib/net462/System.Net.NameResolution.dll",
+        "lib/net462/System.Net.NetworkInformation.dll",
+        "lib/net462/System.Net.Ping.dll",
+        "lib/net462/System.Net.Primitives.dll",
+        "lib/net462/System.Net.Requests.dll",
+        "lib/net462/System.Net.Security.dll",
+        "lib/net462/System.Net.Sockets.dll",
+        "lib/net462/System.Net.WebHeaderCollection.dll",
+        "lib/net462/System.Net.WebSockets.Client.dll",
+        "lib/net462/System.Net.WebSockets.dll",
+        "lib/net462/System.ObjectModel.dll",
+        "lib/net462/System.Reactive.Core.dll",
+        "lib/net462/System.Reactive.Interfaces.dll",
+        "lib/net462/System.Reactive.Linq.dll",
+        "lib/net462/System.Reactive.PlatformServices.dll",
+        "lib/net462/System.Reactive.Windows.Threading.dll",
+        "lib/net462/System.Reflection.Extensions.dll",
+        "lib/net462/System.Reflection.Primitives.dll",
+        "lib/net462/System.Reflection.dll",
+        "lib/net462/System.Resources.Reader.dll",
+        "lib/net462/System.Resources.ResourceManager.dll",
+        "lib/net462/System.Resources.Writer.dll",
+        "lib/net462/System.Runtime.CompilerServices.VisualC.dll",
+        "lib/net462/System.Runtime.Extensions.dll",
+        "lib/net462/System.Runtime.Handles.dll",
+        "lib/net462/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "lib/net462/System.Runtime.InteropServices.dll",
+        "lib/net462/System.Runtime.Numerics.dll",
+        "lib/net462/System.Runtime.Serialization.Formatters.dll",
+        "lib/net462/System.Runtime.Serialization.Json.dll",
+        "lib/net462/System.Runtime.Serialization.Primitives.dll",
+        "lib/net462/System.Runtime.Serialization.Xml.dll",
+        "lib/net462/System.Runtime.dll",
+        "lib/net462/System.Security.Claims.dll",
+        "lib/net462/System.Security.Cryptography.Algorithms.dll",
+        "lib/net462/System.Security.Cryptography.Csp.dll",
+        "lib/net462/System.Security.Cryptography.Encoding.dll",
+        "lib/net462/System.Security.Cryptography.Primitives.dll",
+        "lib/net462/System.Security.Cryptography.X509Certificates.dll",
+        "lib/net462/System.Security.Principal.dll",
+        "lib/net462/System.Security.SecureString.dll",
+        "lib/net462/System.Text.Encoding.Extensions.dll",
+        "lib/net462/System.Text.Encoding.dll",
+        "lib/net462/System.Text.RegularExpressions.dll",
+        "lib/net462/System.Threading.Overlapped.dll",
+        "lib/net462/System.Threading.Tasks.Parallel.dll",
+        "lib/net462/System.Threading.Tasks.dll",
+        "lib/net462/System.Threading.Thread.dll",
+        "lib/net462/System.Threading.ThreadPool.dll",
+        "lib/net462/System.Threading.Timer.dll",
+        "lib/net462/System.Threading.dll",
+        "lib/net462/System.ValueTuple.dll",
+        "lib/net462/System.Xml.ReaderWriter.dll",
+        "lib/net462/System.Xml.XDocument.dll",
+        "lib/net462/System.Xml.XPath.XDocument.dll",
+        "lib/net462/System.Xml.XPath.dll",
+        "lib/net462/System.Xml.XmlDocument.dll",
+        "lib/net462/System.Xml.XmlSerializer.dll",
+        "lib/net462/log4net.dll",
+        "lib/net462/netstandard.dll"
+      ]
+    },
+    "Kognifai.Galore.Shared.Assets/1.1.0": {
+      "sha512": "bhZUOaAaEszpYoXxiOBqJnZNB8iS56JyxKIn3IvvPznwJaS7Tx5p3DKWWsnBiEt2wJKs6VieQu8R4pew3UpM3w==",
+      "type": "package",
+      "path": "kognifai.galore.shared.assets/1.1.0",
+      "files": [
+        "kognifai.galore.shared.assets.1.1.0.nupkg.sha512",
+        "kognifai.galore.shared.assets.nuspec",
+        "lib/net46/Kognifai.Galore.Shared.Assets.dll",
+        "lib/netstandard1.3/Kognifai.Galore.Shared.Assets.dll"
+      ]
+    },
+    "Kognifai.Galore.Shared.DataContracts/1.1.0": {
+      "sha512": "AECUAXqa1QBB9+1ZY6hRgyxLlE6C+cvFwUyITiy3cZ99I4lMAy3lgenGK8imeYJsXWZZ8otijgpPwly3+EHCRg==",
+      "type": "package",
+      "path": "kognifai.galore.shared.datacontracts/1.1.0",
+      "files": [
+        "kognifai.galore.shared.datacontracts.1.1.0.nupkg.sha512",
+        "kognifai.galore.shared.datacontracts.nuspec",
+        "lib/net46/Kognifai.Galore.Shared.DataContracts.dll",
+        "lib/netstandard1.3/Kognifai.Galore.Shared.DataContracts.dll"
+      ]
+    },
+    "Kognifai.Galore.Shared.Series/1.1.0": {
+      "sha512": "pJNfgoeKvPF1DcbH5+x3/FUD7u212OhDxlAuA95pnyRfL9vCjec4Y5g1rr1ecHpdnoiN5tqISHnKSxpEukkQlg==",
+      "type": "package",
+      "path": "kognifai.galore.shared.series/1.1.0",
+      "files": [
+        "kognifai.galore.shared.series.1.1.0.nupkg.sha512",
+        "kognifai.galore.shared.series.nuspec",
+        "lib/net45/Kognifai.Galore.Shared.Series.dll",
+        "lib/netstandard1.0/Kognifai.Galore.Shared.Series.dll"
+      ]
+    },
+    "Kognifai.Galore.Shared.ServiceClients/1.1.0": {
+      "sha512": "leRxrbtLEPe1xSwqbS4HN2AlerGQ1Smav1WNmnFPR4yv2iyB71ZpIcZJp0vFZJ3IA8gXLHjdpIDFgT+2CVXEKw==",
+      "type": "package",
+      "path": "kognifai.galore.shared.serviceclients/1.1.0",
+      "files": [
+        "kognifai.galore.shared.serviceclients.1.1.0.nupkg.sha512",
+        "kognifai.galore.shared.serviceclients.nuspec",
+        "lib/net46/Kognifai.Galore.Shared.ServiceClients.dll",
+        "lib/netstandard1.3/Kognifai.Galore.Shared.ServiceClients.dll"
+      ]
+    },
+    "Kognifai.M2Mqtt/1.1.0-alpha0008": {
+      "sha512": "AZhBNe1ox7d5iR/oMFkYwaMopiYFSW7hZ4V2rABlezQdxyVOlh6OCqLRrSIQao5PN9BNGRjEq/hNYcezy/caRQ==",
+      "type": "package",
+      "path": "kognifai.m2mqtt/1.1.0-alpha0008",
+      "files": [
+        "kognifai.m2mqtt.1.1.0-alpha0008.nupkg.sha512",
+        "kognifai.m2mqtt.nuspec",
+        "lib/net40/M2Mqtt.Net40.dll",
+        "lib/net40/M2Mqtt.Net40.pdb",
+        "lib/net462/M2Mqtt.Net.dll",
+        "lib/net462/M2Mqtt.Net.pdb"
+      ]
+    },
+    "log4net/2.0.8": {
+      "sha512": "N41MQGHZImiCfn0cUuSBjZxrcNfIQCuCgQP0rpgB3J/NWponEh3lc1LxJEuIsPAR9Oc1jVvfkNNFCY1C5hf9LA==",
+      "type": "package",
+      "path": "log4net/2.0.8",
+      "files": [
+        "lib/net20-full/log4net.dll",
+        "lib/net20-full/log4net.xml",
+        "lib/net35-client/log4net.dll",
+        "lib/net35-client/log4net.xml",
+        "lib/net35-full/log4net.dll",
+        "lib/net35-full/log4net.xml",
+        "lib/net40-client/log4net.dll",
+        "lib/net40-client/log4net.xml",
+        "lib/net40-full/log4net.dll",
+        "lib/net40-full/log4net.xml",
+        "lib/net45-full/log4net.dll",
+        "lib/net45-full/log4net.xml",
+        "lib/netstandard1.3/log4net.dll",
+        "log4net.2.0.8.nupkg.sha512",
+        "log4net.nuspec"
+      ]
+    },
+    "morelinq/2.6.0": {
+      "sha512": "tlKZWsl+djJRWk5O+16BErpnoJshs1iX9FCxn4LLxWalXJeqY6S2jtI5H2/NdR8qDZ58MyxBRYYBsWY0B4WFfA==",
+      "type": "package",
+      "path": "morelinq/2.6.0",
+      "files": [
+        "lib/net35/MoreLinq.dll",
+        "lib/net35/MoreLinq.xml",
+        "lib/net40/MoreLinq.dll",
+        "lib/net40/MoreLinq.xml",
+        "lib/netstandard1.0/MoreLinq.dll",
+        "lib/netstandard1.0/MoreLinq.xml",
+        "morelinq.2.6.0.nupkg.sha512",
+        "morelinq.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/10.0.3": {
+      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
+      "type": "package",
+      "path": "newtonsoft.json/10.0.3",
+      "files": [
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.10.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "System.ValueTuple/4.3.0": {
+      "sha512": "cNLEvBX3d6MMQRZe3SMFNukVbitDAEpVZO17qa0/2FHxZ7Y7PpFRpr6m2615XYM/tYYYf0B+WyHNujqIw8Luwg==",
+      "type": "package",
+      "path": "system.valuetuple/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/.xml",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/.xml",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "system.valuetuple.4.3.0.nupkg.sha512",
+        "system.valuetuple.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.2": [
+      "Kognifai.CloudServices.Shared >= 1.1.0-alpha0112",
+      "Kognifai.Edge.Serialization >= 1.1.0-alpha0043",
+      "Kognifai.M2Mqtt >= 1.1.0-alpha0008"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\devarp\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
+    "restore": {
+      "projectUniqueName": "C:\\Users\\devarp\\Source\\Repos\\IoT\\M2MqttExampleClient\\M2MqttClient\\M2MqttExampleClient.csproj",
+      "projectName": "M2MqttExampleClient",
+      "projectPath": "C:\\Users\\devarp\\Source\\Repos\\IoT\\M2MqttExampleClient\\M2MqttClient\\M2MqttExampleClient.csproj",
+      "packagesPath": "C:\\Users\\devarp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\devarp\\Source\\Repos\\IoT\\M2MqttExampleClient\\M2MqttClient\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\devarp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net462"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://kdi.jfrog.io/kdi/api/nuget/nuget": {}
+      },
+      "frameworks": {
+        "net462": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net462": {
+        "dependencies": {
+          "Kognifai.Edge.Serialization": {
+            "target": "Package",
+            "version": "1.1.0-alpha0043"
+          },
+          "Kognifai.CloudServices.Shared": {
+            "target": "Package",
+            "version": "1.1.0-alpha0112"
+          },
+          "Kognifai.M2Mqtt": {
+            "target": "Package",
+            "version": "1.1.0-alpha0008"
+          }
+        }
+      }
+    }
+  }
+}
