@@ -28,7 +28,7 @@ See also:
 - [Edge hardware](https://github.com/kognifai/IoT/blob/master/IoT%20Documentation/Edge%20Hardware.md)
 - [Remote diagnostics](https://github.com/kognifai/IoT/blob/master/IoT%20Documentation/Remote%20Diagnostics.md)
 - [Connector SDK](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/Kognifai%20Connector%20SDK%20Overview.md)
-
+- [Support for low bandwidht scenarios](https://github.com/kognifai/IoT/blob/master/IoT%20Documentation/Support%20for%20low%20bandwidth%20scenarios.md)
 --------------------------------------------------------------------------------------------------------------------------
 # What is IoT ?    [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
