@@ -10,7 +10,15 @@ After reading this article you will get to know about:
 
 
 --------------------------------------------------------------------------------------------------------------------------
+### See also:
+- [Working with the connector SDK](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/Working%20with%20Connector%20SDK.md)
+- [Serialization](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/Serialization.md)
+- [Serialize timestamp and value](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/Serialize%20Timestamp%20and%20Value.md)
+- [Serialize an alarm](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/Serialize%20an%20Alarm.md)
+- [Send Serialized data to the edge gateway](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/Send%20Serialized%20data%20to%20the%20Edge%20Gateway.md)
+- []
 
+--------------------------------------------------------------------------------------------------------------------------
 The following figure depicts the Kognifai Connector SDK that includs "Kognifai-  Edge, Kognifai- Data Processing Analytics and Management",  and "Presentation & Enterprise connectivity":
 
 ![](https://github.com/kognifai/IoT_Documentation/blob/master/IoT_Images/PlatformRefArch.png?raw=true)
