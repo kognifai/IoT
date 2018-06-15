@@ -44,3 +44,12 @@ The Edgegateway can be deployed with a MQTT endpoint. Once the Edgegateway is st
 As MQTT libraries are available in many programming languages you are not required to use the MQTT client library that comes with the connector SDK, you can use any library which implements the MQTT standard properly. If you are implementing your connector using C#, we reccomend that you use the MQTT client libaries bundled with the Connector SDK. The Kognifai.m2mqtt is a fork of the widely used m2mqtt library and it is available from nuget.org
 
 In order for the messages to be understood by the edge gateway, they must be serialized with google protobuf, using the Kognifai Edge protobuf schema.
+
+## Exchanging transmit lists with the edge gateway
+- The MQTT endpoint has a topic for publishing a list of sensors that your connector supports. If you send a list of available sensors to the MQTT endpoint it will propagate to the Sensor Configuration App in the cloud, and the end user will be able to configure which sensors to stream to the cloud. The use of this functionality is illustrated in the sample code.
+
+## Filtering sensor data sent to the cloud
+- The MQTT endpoint supports filtering of the sensor data you send to the edge gateway. Only data from sensors which you have configured in the Sensor Configuration App will be forwarded to the cloud. The end user can use the Sensor Configuration App in the cloud to configure which sensors to stream to the cloud.
+The use of this functionality is illustrated in the sample code.
+-It is recommended to send the list of available sensors to the MQTT endpoint on startup of your connector and then subsequently every 24 hours.
+- The MQTT endpoint does also have a topic where it publishes the list of sensors to be replicated to the cloud. It is not required to use this in your custom connector. However, if you are performing CPU intensive load per sensor you stream to the MQTT endpoint, you may optimize the dataflow by only sending data from sensors which will be sent to the cloud.
