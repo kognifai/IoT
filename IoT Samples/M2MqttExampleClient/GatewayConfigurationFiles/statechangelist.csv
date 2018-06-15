@@ -1,2 +1,0 @@
-EventID,DisplayName,PollFrequency,Path
-StateChangeEvent01,StateChangeEvent01,1000,Edge/M2MqttExampleClient/EdgeGateway/StateChangeEvent01

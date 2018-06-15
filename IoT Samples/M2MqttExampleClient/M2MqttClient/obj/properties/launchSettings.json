@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "M2MqttExampleClient": {
-      "commandName": "Project",
-      "commandLineArgs": "client1 localhost"
-    }
-  }
-}
