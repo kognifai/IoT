@@ -2,7 +2,7 @@
 
 After reading this article you will get to know about:
 
-[What do I need to create a connector ?](https://github.com/kognifai/IoT_Documentation/wiki/Kognifai-Connector-SDK#what-do-i-need-to-create-a-connector-)
+[What do I need to create a connector?](https://github.com/kognifai/IoT_Documentation/wiki/Kognifai-Connector-SDK#what-do-i-need-to-create-a-connector-)
 
 [Kognifai Connector SDK tools](https://github.com/kognifai/IoT_Documentation/wiki/Kognifai-Connector-SDK#kognifai-connector-sdk-tools)
 
@@ -19,16 +19,16 @@ After reading this article you will get to know about:
 - []
 
 --------------------------------------------------------------------------------------------------------------------------
-The following figure depicts the Kognifai Connector SDK that includs "Kognifai-  Edge, Kognifai- Data Processing Analytics and Management",  and "Presentation & Enterprise connectivity":
+The following figure depicts the Kognifai Connector SDK that includes "Kognifai-  Edge, Kognifai- Data Processing Analytics and Management",  and "Presentation & Enterprise connectivity":
 
 ![](https://github.com/kognifai/IoT_Documentation/blob/master/IoT_Images/PlatformRefArch.png?raw=true)
 
-## What do I need to create a connector ?
+## What do I need to create a connector?
 
-To create a connector, you need a client library which understands the **_MQTT standard_** :
+To create a connector, you need a client library which understands the **_MQTT standard_**:
 
-- MQTT is a popular and wellknown publish subscribe protocol
-- The Kognfai Edge gateway hosts a MQTT server endpoint
+- MQTT is a popular and well known publish subscribe protocol
+- The Kognifai Edge gateway hosts a MQTT server endpoint
 - In order to send messages to the Kognifai edge gateway, you just publish messages to a MQTT topic
 
 You need to send messages which are serialized in such a way that the Kognifai Edge Gateway understands them:
@@ -47,9 +47,9 @@ You need to send messages which are serialized in such a way that the Kognifai E
 
 MQTT is a simple and lightweight protocol which is used in many IoT scenarios.
 
-The Edgegateway can be deployed with a MQTT endpoint. Once the Edgegateway is started, it will start its MQTT service. Custom connectors can then connect to the Edgegateway using the standard MQTT on port 1883.
+The Edge gateway can be deployed with a MQTT endpoint. Once the Edge gateway is started, it will start its MQTT service. Custom connectors can then connect to the Edge gateway using the standard MQTT on port 1883.
 
-As MQTT libraries are available in many programming languages you are not required to use the MQTT client library that comes with the connector SDK, you can use any library which implements the MQTT standard properly. If you are implementing your connector using C#, we reccomend that you use the MQTT client libaries bundled with the Connector SDK. The Kognifai.m2mqtt is a fork of the widely used m2mqtt library and it is available from nuget.org
+As MQTT libraries are available in many programming languages you are not required to use the MQTT client library that comes with the connector SDK, you can use any library which implements the MQTT standard properly. If you are implementing your connector using C#, we recommend that you use the MQTT client libraries bundled with the Connector SDK. The Kognifai.m2mqtt is a fork of the widely used m2mqtt library and it is available from nuget.org
 
 In order for the messages to be understood by the edge gateway, they must be serialized with google protobuf, using the Kognifai Edge protobuf schema.
 
@@ -59,5 +59,5 @@ In order for the messages to be understood by the edge gateway, they must be ser
 ## Filtering sensor data sent to the cloud
 - The MQTT endpoint supports filtering of the sensor data you send to the edge gateway. Only data from sensors which you have configured in the Sensor Configuration App will be forwarded to the cloud. The end user can use the Sensor Configuration App in the cloud to configure which sensors to stream to the cloud.
 The use of this functionality is illustrated in the [sample code](https://github.com/kognifai/IoT/tree/master/IoT%20Samples/M2MqttExampleClient).
-- It is recommended to send the list of available sensors to the MQTT endpoint on startup of your connector and then subsequently every 24 hours.
+- It is recommended to send the list of available sensors to the MQTT endpoint on start-up of your connector and then subsequently every 24 hours.
 - The MQTT endpoint does also have a topic where it publishes the list of sensors to be replicated to the cloud. It is not required to use this in your custom connector. However, if you are performing CPU intensive load per sensor you stream to the MQTT endpoint, you may optimize the dataflow by only sending data from sensors which will be sent to the cloud.
