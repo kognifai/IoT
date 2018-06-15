@@ -9,11 +9,11 @@ Edge installations can be deployed in various configurations, depending on clien
 
 There are several variants of how a lightweight edge solution might be deployed:
 
-**1.**	Kognifai EdgeGateway with integrated connectors (clients) to consume data from third party systems such as for example OPC servers. Integrated connectors can be managed and re-configured from a remote location.
+**1.**	Kognifai Edge Gateway with integrated connectors (clients) to consume data from third party systems such as for example OPC servers. Integrated connectors can be managed and re-configured from a remote location.
 
-**2.**	Kongsberg EdgeGateway deployed with one or more endpoints to which third party systems can send data. The Kognifai EdgeGateway supports a MQTT endpoint and there is a connector SDK which will help third parties go get started with writing connectors that can send data to the Kognifai EdgeGateway. 
+**2.**	Kongsberg Edge Gateway deployed with one or more endpoints to which third party systems can send data. The Kognifai Edge Gateway supports a MQTT endpoint and there is a connector SDK which will help third parties go get started with writing connectors that can send data to the Kognifai Edge Gateway. 
 
-**3.**	A combination of **1)** and **2)**. The Kognifai EdgeGateways are available in several distributions, and a distribution will contain a set of integrated connectors and endpoints to which clients can send data.
+**3.**	A combination of **1)** and **2)**. The Kognifai Edge Gateways are available in several distributions, and a distribution will contain a set of integrated connectors and endpoints to which clients can send data.
 
 ![Kognifai Edge Gateway Distribution](https://github.com/kognifai/IoT_Documentation/blob/master/IoT_Images/Kognifai%20Edge%20Gateway%20Distribution.png?raw=true)
 
