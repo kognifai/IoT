@@ -4,7 +4,7 @@
 
 The Kognifai IoT Platform consists of a series of edge and cloud side components:
 
-## Edge:
+## Edge
 - The Edge Registration Tool will register a new device with the Kognifai cloud and install the Edge Management Client. As part of this registration, a private/public key-pair will be generated within the TPM chip of the device. 
 - The Edge Management Client will regularly ask the Edge Management Gateway if new software can be downloaded and onto the edge device, and then download and install the software updates. The Edge Management Client will also regularly download new authentication tokens for use with other services. The Edge Management Client uses the Trusted Platform Module (TPM) to authenticate with the cloud through a TPM challenge. 
 - The Edge gateway software distribution comes in different flavours, and it is the entity that takes care of receiving, buffering and sending sensor data to the cloud.
