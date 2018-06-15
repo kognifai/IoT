@@ -11,13 +11,13 @@ The hardware based root of trust is used to authenticate the edge device with th
 The software that is downloaded to the device by the Edge Management Client is signed in order to prevent any tampering with the software
 
 # Updatable security
-The software running at the edge can be updated remotely. Any security patches fot the edge gateway software can easily be deployed across many devices.
+The software running at the edge can be updated remotely. Any security patches for the edge gateway software can easily be deployed across many devices.
 
 # Secure network
-All of the connections between the edge device is run over encrypted channels (AMQP with encryption for streaming and TLS for webservices). In addition the network between the edge device and the cloud can be set up with SSL VPN.
+All of the connections between the edge devices is run over encrypted channels (AMQP with encryption for streaming and TLS for web services). In addition the network between the edge device and the cloud can be set up with SSL VPN.
 
 # Lock down of edge devices
-Edge devices will be locked down, and functionlity such as for example boot from USB will be disabled for un-authorized users.
+Edge devices will be locked down, and functionality such as for example boot from USB will be disabled for un-authorized users.
 
 # Monitor edge installations
 The edge software contains functionality for streaming of edge system logs to the cloud for security inspection. This makes it possible
