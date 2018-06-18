@@ -1,7 +1,6 @@
-Welcome to the IoT_Documentation! 
+Welcome to IoT_Documentation! 
 
 Explore these pages to know more about **IoT** and **Edge Connectors**. 
-
 
 
 In this section, we talk about:
@@ -10,7 +9,7 @@ In this section, we talk about:
 
 [What can you achieve with Kognifai IoT Platform?](https://github.com/kognifai/IoT_Documentation/wiki#what-can-you-achieve-with-kognifai-iot-platform?)
 
-[Part and Parcel of Kognifai IoT platform](https://github.com/kognifai/IoT_Documentation/wiki#what-can-you-achieve-with-kognifai-iot-platform) 
+[Part and parcel of Kognifai IoT platform](https://github.com/kognifai/IoT_Documentation/wiki#what-can-you-achieve-with-kognifai-iot-platform) 
 
 
 [Commonly used protocols and technologies in Kognifai IoT Platform and deployment](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/protocols%20and%20technologies.md)
