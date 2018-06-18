@@ -31,18 +31,18 @@ See also:
 --------------------------------------------------------------------------------------------------------------------------
 # What is IoT ?    [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
-The Internet of things (IoT) is the inter-networking of physical devices, vehicles, buildings, and other items, embedded with electronics, software, sensors, actuators, and network connectivity that enable them to collect and exchange data. IoT Platforms form the basis for development of scalable IoT applications and services that connect the real and virtual worlds between those physical devices, systems and people. The Kognifai IoT platform is includes  software running at the edge, integrating the edge systems with the cloud, and also the tools in the cloud required to securely manage your edge installations in a safe and secure manner.
+Internet of things (IoT) is the inter-networking of physical devices, vehicles, buildings, and other items, embedded with electronics, software, sensors, actuators, and network connectivity that enable them to collect and exchange data. IoT Platforms form the basis for development of scalable IoT applications and services that connect the real and virtual world between those physical devices, systems and people. The Kognifai IoT platform includes  software running at the edge, integrating the edge systems with the cloud, and also the tools in the cloud required to securely manage your edge installations in a safe and secure manner.
 
 ## What can you achieve with Kognifai IoT Platform?
 
-The Kognifai IoT platform enables you to:
+Kognifai IoT platform enables you to:
 
 - Connect to a wide variety of source systems
-    - Support for a growing number of source systems, such as OPC DA, OPC UA etc
-    - Connector SDK so that clients can build their own connectors for proprietary source systems
+    - Support for a growing number of source systems such as OPC DA, OPC UA and so on.
+    - Connector SDK is available for the clients to build their own Connectors for proprietary source systems.
 
-- Remotely configure the edge systems in a safe and secure manner
-- Efficiently manage a fleet of edge installations from the cloud
+- Remotely configure the Kongsberg Edge system in a safe and secure manner
+- Manage a fleet of Edge installations from the cloud in an efficient manner
 - Transport data to and from the cloud in a reliable manner
 - Buffer data locally at the Edge when the internet connection is down
 - Stream data into your cloud applications 
@@ -58,7 +58,7 @@ The Kognifai IoT platform enables you to:
 The Kognifai IoT platform is comprised of the following parts:
 
 ### Edge gateway
-The edge gateway connects the edge devices with the cloud. The Edge gateway will transfer your data securely to the cloud. If the internet connection is un-available, the edge-gateway will buffer data locally, and re-transmit once the internet connection is re-established. The Edge gateway comes with a set of integrated connectors which can be used to connect using common protocols such as for example OPC DA and OPC U/A.  The Edge gateway does also host endpoints to which third parties can send data which they want sent to the cloud. A connector SDK is also available for clients to write custom connectors which will send data to the Edge gateway.
+Edge gateway connects the edge devices with the cloud and transfers your data securely to the cloud. If the internet connection is un-available, the edge-gateway will buffer data locally, and re-transmit once the internet connection is re-established. The Edge gateway comes with a set of integrated connectors which can be used to connect using common protocols such as for example OPC DA and OPC U/A.  The Edge gateway does also host endpoints to which third parties can send data which they want sent to the cloud. A connector SDK is also available for clients to write custom connectors which will send data to the Edge gateway.
 
 ### IoT device connectors
 The Kognifai Edge gateway comes with a set of integrated connectors to connect to common source systems. In addition it is possible to build your own device connectors using the Kognifai Connector SDK. 
@@ -68,7 +68,7 @@ The Kognifai Edge gateway will encrypt the data that is sent to the cloud and al
 
 
 ### IoT Cloud dispatcher
-The IOT gateway ensure connectivity by serving as an adapter between devices and instruments in the field and the cloud services. It relays messages from the IoT hub/Event hub to the correct recipients on the cloud side. The Kognifai IoT Cloud dispatcher does also make it possible to send messages back to specific edge installations from the cloud in a secure manner.
+The IOT gateway ensures connectivity by serving as an adapter between devices and instruments in the field and on the cloud services. It relays messages from the IoT hub/Event hub to the correct recipients on the cloud side. The Kognifai IoT Cloud dispatcher does also make it possible to send messages back to specific edge installations from the cloud in a secure manner.
 
 ### Storage
 This is the layer in which the IoT data is stored and retrieved. The Kognifai Storage Solution can be deployed both at the edge and in the cloud. 
