@@ -9,7 +9,7 @@ In this section, we talk about:
 
 [What can you achieve with Kognifai IoT Platform?](https://github.com/kognifai/IoT#what-can-you-achieve-with-kognifai-iot-platform)
 
-[Part and parcel of Kognifai IoT platform](https://github.com/kognifai/IoT_Documentation/#what-can-you-achieve-with-kognifai-iot-platform) 
+[Part and parcel of Kognifai IoT platform](https://github.com/kognifai/IoT#part-and-parcel-of-kognifai-iot-platform) 
 
 
 [Commonly used protocols and technologies in Kognifai IoT Platform and deployment](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/protocols%20and%20technologies.md)
