@@ -1,6 +1,6 @@
 M2MQTT client example using Kognifai Serialization library for serializing
 
-Copyright Kongsberg Digital AS © 2017
+Copyright Kongsberg Digital AS © 2018
  
  The example client shows how to connect/disconnect to/from a MQTT server/broker
  as well as giving examples on how to send messages to the Kognifai platform
@@ -17,10 +17,10 @@ Copyright Kongsberg Digital AS © 2017
 
  Supports both Net40 and Net462
 
- To run this example with the Kognifai platform a edge gateway must be created.
+ To run this example with the Kognifai platform an edge gateway must be created.
  The name of the edge gateway should be set to M2MqttExampleClient.
 
- The edge gateway configuration can be created using the Edge Gateway Manager
+ The edge gateway configuration can be created using the Edge Gateway Manager.
 
  The included gateway configuration files (alarmlist.csv/sensorlist.csv, statechangelist.csv and dataframelist.csv) 
  should be copied to the Edge gateway configuration folder. The Edge Gateway manager can be used to open the configuration
