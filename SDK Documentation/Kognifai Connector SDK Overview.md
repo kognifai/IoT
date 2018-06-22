@@ -2,7 +2,7 @@
 
 After reading this article you will get to know about:
 
-[What do I need to create a connector?]#what-do-i-need-to-create-a-connector-)
+[What do I need to create a connector?](#what-do-i-need-to-create-a-connector-)
 
 [Kognifai Connector SDK tools](#kognifai-connector-sdk-tools)
 
