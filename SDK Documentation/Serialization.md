@@ -1,10 +1,10 @@
 The following topics are covered in this section:
 
-[Serialization - Supported datatypes](https://github.com/kognifai/IoT_Documentation/wiki/Serialization#serialization---supported-datatypes)
+[Serialization - Supported datatypes](serialization---supported-datatypes)
 
-[Understanding the protobuf object structure](https://github.com/kognifai/IoT_Documentation/wiki/Serialization#understanding-the-protobuf-object-structure)
+[Understanding the protobuf object structure](#understanding-the-protobuf-object-structure)
 
-[Protobuf schema and message routing](https://github.com/kognifai/IoT_Documentation/wiki/Serialization#protobuf-schema-and-message-routing)
+[Protobuf schema and message routing](#protobuf-schema-and-message-routing)
 
 --------------------------------------------------------------------------------------------------------------------------
 The edge gateway expects to receive messages serialized with protobuf. Protobuf is a very efficient serialization format for which there are tools/libraries in many programming languages. This will enable having connectors implemented in many different languages. For C# there is also a nugget package which contains pre-built binaries.
