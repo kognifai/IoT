@@ -2,21 +2,20 @@
 
 After reading this article you will get to know about:
 
-[What do I need to create a connector?](https://github.com/kognifai/IoT_Documentation/wiki/Kognifai-Connector-SDK#what-do-i-need-to-create-a-connector-)
+[What do I need to create a connector?]#what-do-i-need-to-create-a-connector-)
 
-[Kognifai Connector SDK tools](https://github.com/kognifai/IoT_Documentation/wiki/Kognifai-Connector-SDK#kognifai-connector-sdk-tools)
+[Kognifai Connector SDK tools](#kognifai-connector-sdk-tools)
 
-[Sending messages to the Edge gateway from your own device connector](https://github.com/kognifai/IoT_Documentation/wiki/Kognifai-Connector-SDK#sending-messages-to-the-edge-gateway-from-your-own-device-connector)
+[Sending messages to the Edge gateway from your own device connector](#sending-messages-to-the-edge-gateway-from-your-own-device-connector)
 
 
 --------------------------------------------------------------------------------------------------------------------------
 ### See also:
-- [Working with the connector SDK](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/Working%20with%20Connector%20SDK.md)
-- [Serialization](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/Serialization.md)
-- [Serialize timestamp and value](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/Serialize%20Timestamp%20and%20Value.md)
-- [Serialize an alarm](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/Serialize%20an%20Alarm.md)
-- [Send Serialized data to the edge gateway](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/Send%20Serialized%20data%20to%20the%20Edge%20Gateway.md)
-- []
+- [Working with the connector SDK](Working%20with%20Connector%20SDK.md)
+- [Serialization](Serialization.md)
+- [Serialize timestamp and value](Serialize%20Timestamp%20and%20Value.md)
+- [Serialize an alarm](Serialize%20an%20Alarm.md)
+- [Send Serialized data to the edge gateway](Send%20Serialized%20data%20to%20the%20Edge%20Gateway.md)
 
 --------------------------------------------------------------------------------------------------------------------------
 The following figure depicts the Kognifai Connector SDK that includes "Kognifai-  Edge, Kognifai- Data Processing Analytics and Management",  and "Presentation & Enterprise connectivity":
