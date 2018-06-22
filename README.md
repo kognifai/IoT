@@ -5,7 +5,7 @@ Explore these pages to know more about **IoT** and **Edge Connectors**.
 
 In this section, we talk about:
 
-[What is IoT?](https://github.com/kognifai/IoT#what-is-iot-----)
+[What is IoT?](IoT#what-is-iot-----)
 
 [What can you achieve with Kognifai IoT Platform?](https://github.com/kognifai/IoT#what-can-you-achieve-with-kognifai-iot-platform)
 
