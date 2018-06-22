@@ -1,6 +1,6 @@
 The following topics are covered in this section:
 
-[Serialization - Supported datatypes](serialization---supported-datatypes)
+[Serialization - Supported datatypes](#serialization---supported-datatypes)
 
 [Understanding the protobuf object structure](#understanding-the-protobuf-object-structure)
 
