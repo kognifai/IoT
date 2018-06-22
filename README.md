@@ -7,9 +7,9 @@ In this section, we talk about:
 
 [What is IoT?](#what-is-iot-----)
 
-[What can you achieve with Kognifai IoT Platform?](https://github.com/kognifai/IoT#what-can-you-achieve-with-kognifai-iot-platform)
+[What can you achieve with Kognifai IoT Platform?](#what-can-you-achieve-with-kognifai-iot-platform)
 
-[Part and parcel of Kognifai IoT platform](https://github.com/kognifai/IoT#part-and-parcel-of-kognifai-iot-platform) 
+[Part and parcel of Kognifai IoT platform](#part-and-parcel-of-kognifai-iot-platform) 
 
 
 
@@ -60,26 +60,20 @@ This is the layer in which the IoT data is stored and retrieved. The Kognifai St
 ### Presentation
 The Kognifai Application Framework provides a powerful visualization platform. It can be deployed both at the edge and in the cloud, and user interface (UI), in the industrial design field of human–computer interaction, is the space where interactions between humans and machines occur. Kognifai provides strong out-of-the-box collection of data visualization applications such as dashboard, trends, reports, data export and event analytics, supporting various customer IoT cases.
 
-### Connector SDK:
-[Connector SDK](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/Kognifai%20Connector%20SDK%20Overview.md)
-
-
-
 
 --------------------------------------------------------------------------------------------------------------------------
 See also:
-- [IoT Platform Architecture overview](https://github.com/kognifai/IoT/blob/master/IoT%20Documentation/Overview%20-%20IoT%20Platform%20Architecture%20Overview.md)
+- [IoT Platform Architecture overview](IoT%20Documentation/Overview%20-%20IoT%20Platform%20Architecture%20Overview.md)
 - [Edge deployment models](https://github.com/kognifai/IoT/blob/master/IoT%20Documentation/Overview%20-%20Edge%20Deployment%20Models.md)
-- [Edge connectors and endpoints overview](https://github.com/kognifai/IoT/blob/master/IoT%20Documentation/Overview%20%20Connectors%20and%20Endpoints%20.md)
-- [Sensor Configuration overview](https://github.com/kognifai/IoT/blob/master/IoT%20Documentation/Overview%20-%20Sensor%20Configuration%20Overview.md)
-
-- [IoT platform security](https://github.com/kognifai/IoT/blob/master/IoT%20Documentation/Overview%20-%20Security.md)
-- [Edge gateway components](https://github.com/kognifai/IoT/blob/master/IoT%20Documentation/Edge%20Gateway%20Components.md)
-- [Register a new device](https://github.com/kognifai/IoT/blob/master/IoT%20Documentation/Deploy-%20register%20a%20new%20edge%20device.md)
-- [Edge hardware](https://github.com/kognifai/IoT/blob/master/IoT%20Documentation/Edge%20Hardware.md)
-- [Remote diagnostics](https://github.com/kognifai/IoT/blob/master/IoT%20Documentation/Remote%20Diagnostics.md)
-- [Connector SDK](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/Kognifai%20Connector%20SDK%20Overview.md)
-- [Support for low bandwidht scenarios](https://github.com/kognifai/IoT/blob/master/IoT%20Documentation/Support%20for%20low%20bandwidth%20scenarios.md)
+- [Edge connectors and endpoints overview](IoT%20Documentation/Overview%20%20Connectors%20and%20Endpoints%20.md)
+- [Sensor Configuration overview](IoT%20Documentation/Overview%20-%20Sensor%20Configuration%20Overview.md)
+- [IoT platform security](IoT%20Documentation/Overview%20-%20Security.md)
+- [Edge gateway components](IoT%20Documentation/Edge%20Gateway%20Components.md)
+- [Register a new device](IoT%20Documentation/Deploy-%20register%20a%20new%20edge%20device.md)
+- [Edge hardware](IoT%20Documentation/Edge%20Hardware.md)
+- [Remote diagnostics](IoT%20Documentation/Remote%20Diagnostics.md)
+- [Connector SDK](SDK%20Documentation/Kognifai%20Connector%20SDK%20Overview.md)
+- [Support for low bandwidht scenarios](IoT%20Documentation/Support%20for%20low%20bandwidth%20scenarios.md)
 --------------------------------------------------------------------------------------------------------------------------
 
 
