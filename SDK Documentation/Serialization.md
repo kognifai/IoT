@@ -1,10 +1,10 @@
 The following topics are covered in this section:
 
-[Serialization - Supported datatypes](https://github.com/kognifai/IoT_Documentation/wiki/Serialization#serialization---supported-datatypes)
+[Serialization - Supported datatypes](#serialization---supported-datatypes)
 
-[Understanding the protobuf object structure](https://github.com/kognifai/IoT_Documentation/wiki/Serialization#understanding-the-protobuf-object-structure)
+[Understanding the protobuf object structure](#understanding-the-protobuf-object-structure)
 
-[Protobuf schema and message routing](https://github.com/kognifai/IoT_Documentation/wiki/Serialization#protobuf-schema-and-message-routing)
+[Protobuf schema and message routing](#protobuf-schema-and-message-routing)
 
 --------------------------------------------------------------------------------------------------------------------------
 The edge gateway expects to receive messages serialized with protobuf. Protobuf is a very efficient serialization format for which there are tools/libraries in many programming languages. This will enable having connectors implemented in many different languages. For C# there is also a nugget package which contains pre-built binaries.
@@ -24,7 +24,7 @@ The protobuf schema that describes the objects used by the Kognifai Edge gateway
 
 Here is the Protobuf Schema explained through following figure:
 
-![](https://github.com/kognifai/IoT_Documentation/blob/master/IoT_Images/Kognifai%20Protbuf.png?raw=true)
+![](Images/Kognifai%20Protbuf.png?raw=true)
 
 - In order to optimize the bandwidth utilization for the solution and to simplify message flow, a set of messages from the Edge gateway are grouped together.
 - Each of the messages are serialized to a byte array and inserted into a “MessageWrapper”. 
@@ -41,5 +41,5 @@ For more information on Protocol Buffers, refer:: https://developers.google.com/
 - Timeseries data will use subprotocol 0.
 - Within each subprotocol each message type will have a unique message number, which can then be used for more fine-grained message routing within a message handler for that sub protocol in the cloud.
 
-![](https://github.com/kognifai/IoT_Documentation/blob/master/IoT_Images/Protobuf%20Schema.png?raw=true)
+![](Images/Protobuf%20Schema.png?raw=true)
 
