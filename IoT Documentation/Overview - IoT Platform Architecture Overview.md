@@ -1,4 +1,4 @@
-# Kognifai IoT Platform Architecture Overview
+#  Architectural Overview of the Kognifai IoT Platform
 
 The Kognifai IoT Platform consists of a series of edge and cloud side components:
 
