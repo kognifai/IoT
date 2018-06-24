@@ -1,8 +1,9 @@
 # Kognifai IoT Platform Architecture Overview
 
+The Kognifai IoT Platform consists of a series of edge and cloud side components:
+
 ![](Images/Kognifai%20Iot%20Platform%20-%20platform%20overview.png?raw=true)
 
-The Kognifai IoT Platform consists of a series of edge and cloud side components:
 
 ## Edge
 - The Edge Registration Tool will register a new device with the Kognifai cloud and install the Edge Management Client. As part of this registration, a private/public key-pair will be generated within the TPM chip of the device. 
