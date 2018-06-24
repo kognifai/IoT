@@ -1,2 +1,0 @@
-EventID,DisplayName,PollFrequency,Path
-Alarm01,Alarm01,1000,Edge/M2MqttExampleClient/EdgeGateway/Alarm01
