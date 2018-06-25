@@ -21,15 +21,15 @@ namespace M2MqttExampleClient
                 {
                     SensorMetadata sensorMeta = new SensorMetadata
                     {
-                        ExternalId = data.ExternalId
+                        SensorId = data.ExternalId
                     };
-                    sensorMeta.SensorProperties.Add("TargetNodeDisplayName", new Property(data.TargetNodeDisplayName));
-                    sensorMeta.SensorProperties.Add("PollFrequency", new Property(data.ExternalPollFrequency.ToString()));
-                    sensorMeta.SensorProperties.Add("TargetPath", new Property(data.TargetPath.ToString()));
-                    sensorMeta.SensorProperties.Add("SensorReadingType", new Property(data.ExternalReadingType.ToString()));
-                    sensorMeta.SensorProperties.Add("ExternalIndexDelayTimeSec", new Property(data.ExternalIndexDelayTimeSec.ToString()));
-                    sensorMeta.SensorProperties.Add("Description", new Property(data.ExternalSensorColumnDescription.ToString()));
-                    sensorMeta.SensorProperties.Add("MeasureUnit", new Property(data.ExternalColumnMeasureunit.ToString()));
+                    sensorMeta.Properties.Add("TargetNodeDisplayName", new Property(data.TargetNodeDisplayName));
+                    sensorMeta.Properties.Add("PollFrequency", new Property(data.ExternalPollFrequency.ToString()));
+                    sensorMeta.Properties.Add("TargetPath", new Property(data.TargetPath.ToString()));
+                    sensorMeta.Properties.Add("SensorReadingType", new Property(data.ExternalReadingType.ToString()));
+                    sensorMeta.Properties.Add("ExternalIndexDelayTimeSec", new Property(data.ExternalIndexDelayTimeSec.ToString()));
+                    sensorMeta.Properties.Add("Description", new Property(data.ExternalSensorColumnDescription.ToString()));
+                    sensorMeta.Properties.Add("MeasureUnit", new Property(data.ExternalColumnMeasureunit.ToString()));
                     sensorMetadata.Add(sensorMeta);
                 }
                 return sensorMetadata;
