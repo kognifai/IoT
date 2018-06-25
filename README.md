@@ -75,7 +75,7 @@ See also:
 - [Register a new device](IoT%20Documentation/Deploy-%20register%20a%20new%20edge%20device.md)
 - [Edge hardware](IoT%20Documentation/Edge%20Hardware.md)
 - [Remote diagnostics](IoT%20Documentation/Remote%20Diagnostics.md)
-- [Connector SDK](SDK%20Documentation/Kognifai%20Connector%20SDK%20Overview.md)
+- [Connector SDK](SDK%20Documentation/readme.md)
 - [Support for low bandwidth scenarios](IoT%20Documentation/Support%20for%20low%20bandwidth%20scenarios.md)
 --------------------------------------------------------------------------------------------------------------------------
 
