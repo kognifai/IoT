@@ -53,6 +53,21 @@
     <Compile Include="..\SensorData.cs" Link="SensorData.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\GatewayConfigurationFiles\alarmlist.csv" Link="GatewayConfigurationFiles\alarmlist.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\GatewayConfigurationFiles\availablesensorlist.csv" Link="GatewayConfigurationFiles\availablesensorlist.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\GatewayConfigurationFiles\dataframelist.csv" Link="GatewayConfigurationFiles\dataframelist.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\GatewayConfigurationFiles\sensorlist.csv" Link="GatewayConfigurationFiles\sensorlist.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\GatewayConfigurationFiles\statechangelist.csv" Link="GatewayConfigurationFiles\statechangelist.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="app.config" />
     <None Include="log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -63,5 +78,8 @@
     <PackageReference Include="CsvHelper" Version="7.1.1" />
     <PackageReference Include="Kognifai.Edge.Serialization" Version="2.0.0-rc0002" />
     <PackageReference Include="Kognifai.M2Mqtt" Version="1.1.0-rc0001" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GatewayConfigurationFiles\" />
   </ItemGroup>
 </Project>

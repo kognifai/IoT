@@ -15,6 +15,8 @@
  * The program also includes an example on how messages can be grouped together and
  * sent in a container.
  *
+ * Also includes, how to send available sensors and receive transmit lists
+ * 
  * Supports both Net40 and Net462
  *
  * Copyright Kongsberg Digital AS © 2017
@@ -29,7 +31,9 @@ using Kognifai.Serialization;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 using Kognifai.Mqtt;
+using System.IO;
 #if NET_FRAMEWORK40
+using ProtoBuf;
 #else
 using Google.Protobuf;
 #endif
@@ -164,6 +168,7 @@ namespace M2MqttExampleClient
                             var delay = Delay(1);
                             delay.Wait();
                         }
+                        Console.WriteLine("Sent time series messages");
                     }
 
                     /* send alarm event messages, toggles the alarm on/off */
@@ -191,6 +196,7 @@ namespace M2MqttExampleClient
                         client.Publish(Topics.CloudBound, messageWrapper.ToByteArray(), MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, false);
                         var delay = Delay(10);
                         delay.Wait();
+                        Console.WriteLine("Sent alarm message");
                     }
 
                     /* send state change event messages */
@@ -210,6 +216,7 @@ namespace M2MqttExampleClient
                         var messageWrapper = stateChanged.ToMessageWrapper();
                         client.Publish(Topics.CloudBound, messageWrapper.ToByteArray(), MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, false);
                         state++;
+                        Console.WriteLine("Sent state change message");
                     }
 
                     /* send sample set messages, alternates between a sinus/cosinus periode */
@@ -237,6 +244,7 @@ namespace M2MqttExampleClient
                         DataframeReplicationMessage samplesetReplicationMessage = new DataframeReplicationMessage("SampleSet01", "SampleSet01", dataFrame);
                         var messageWrapper = samplesetReplicationMessage.ToMessageWrapper();
                         client.Publish(Topics.CloudBound, messageWrapper.ToByteArray(), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+                        Console.WriteLine("Sent sample set message");
                     }
 
                     /* send a compressed container consisting of time series,
@@ -318,6 +326,8 @@ namespace M2MqttExampleClient
                         }
                         MessageArrayContainer container = new MessageArrayContainer("", array, true);
                         client.Publish(Topics.CloudBoundContainer, container.ToByteArray(), MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, false);
+
+                        Console.WriteLine("Sent cloudBoundContainer messages");
                     }
 
 
@@ -326,7 +336,9 @@ namespace M2MqttExampleClient
                      */
                     if (pressedKey.Key == ConsoleKey.D6)
                     {
-                        var sensors = CsvFileReader.ReadDataFromCsvFile("..\\GatewayConfigurationFiles\\availablesensorlist.csv");
+                        var applicationPath = AppDomain.CurrentDomain.BaseDirectory;
+                        string filePath = Path.Combine(applicationPath, "GatewayConfigurationFiles", "availablesensorlist.csv");
+                        var sensors = CsvFileReader.ReadDataFromCsvFile(filePath);
                         AvailableSensorListReplicationMessage availableSensors = new AvailableSensorListReplicationMessage();
                         availableSensors.ConnectorType = "Mqtt";
                         availableSensors.SourceName = "source1";
@@ -341,6 +353,7 @@ namespace M2MqttExampleClient
                     if (pressedKey.Key == ConsoleKey.D7)
                     {
                         client.Subscribe(new[] { Topics.TransmitLists }, new[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
+                        Console.WriteLine("Subscribed for transmit lists");
                     }
 
                 }
@@ -359,6 +372,15 @@ namespace M2MqttExampleClient
             Console.WriteLine($"+ QoS = {message.QosLevel}");
             Console.WriteLine($"+ Retain = {message.Retain}");
             Console.WriteLine();
+#if NET_FRAMEWORK40
+            using (var stream = new MemoryStream(message.Message))
+            {
+                TransmitListReplicationMessage transmitList = Serializer.Deserialize<TransmitListReplicationMessage>(stream);
+            }
+#else
+                TransmitListReplicationMessage transmitList = TransmitListReplicationMessage.Parser.ParseFrom(message.Message);
+#endif
+            Console.WriteLine("Received transmit list");
         }
 
     }
