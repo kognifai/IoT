@@ -20,7 +20,6 @@ Internet of things (IoT) is the inter-networking of physical devices, vehicles, 
 ## What can you achieve with Kognifai IoT Platform?
 
 Kognifai IoT platform enables you to:
-
 - Connect to a wide variety of source systems
     - Support for a growing number of source systems such as OPC DA, OPC UA and so on.
     - Connector SDK is available for the clients to build their own Connectors for proprietary source systems.
@@ -73,7 +72,7 @@ See also:
 - [Edge hardware](IoT%20Documentation/Edge%20Hardware.md)
 - [Remote diagnostics](IoT%20Documentation/Remote%20Diagnostics.md)
 - [Connector SDK](SDK%20Documentation/Kognifai%20Connector%20SDK%20Overview.md)
-- [Support for low bandwidht scenarios](IoT%20Documentation/Support%20for%20low%20bandwidth%20scenarios.md)
+- [Support for low bandwidth scenarios](IoT%20Documentation/Support%20for%20low%20bandwidth%20scenarios.md)
 --------------------------------------------------------------------------------------------------------------------------
 
 
