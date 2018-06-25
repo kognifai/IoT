@@ -1,6 +1,6 @@
 # Support for low bandwidth scenarios
 
-It is quite common for IoT equipment to be deployed in remote locations with poor and intermittent network connectivity. The Kognifai IoT platform has been designed with this in mind to reduce bandwidth consumption:
+It is quite common for IoT equipment to be deployed in remote locations with poor and intermittent network connectivity. The Kognifai IoT platform has been designed, with this in mind, to reduce bandwidth consumption:
 
 - The edge gateway will time multiplex data: All data received in a configurable interval (e.g. 3 seconds) will be buffered, compressed and sent as one package over the network. This gives better compression and less "chatty" communication over the network.
 - The Kognifai IoT platform uses a compact protobuf schema to define the telemetry data to be sent to the cloud, which together with compression reduces the payload sent across the network
