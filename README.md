@@ -15,7 +15,7 @@ In this section, we talk about:
 
 # What is IoT ?    [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
-Internet of things (IoT) is the inter-networking of physical devices, vehicles, buildings, and other items, embedded with electronics, software, sensors, actuators, and network connectivity that enable them to collect and exchange data. IoT Platforms form the basis for development of scalable IoT applications and services that connect the real and virtual world between those physical devices, systems and people. The Kognifai IoT platform includes  software running at the edge, integrating the edge systems with the cloud, and also the tools in the cloud required to securely manage your edge installations in a safe and secure manner.
+Internet of things (IoT) is the inter-networking of physical devices, vehicles, buildings, and other items embedded with electronics, software, sensors, actuators, and network connectivity that enable them to collect and exchange data. IoT Platforms form the basis for development of scalable IoT applications and services that connect the real and virtual world between those physical devices, systems and people. Kognifai IoT platform includes software running at the edge, integrating the edge systems with the cloud, and also \the tools in the cloud required to securely manage your edge installations in a safe and secure manner.
 
 ## What can you achieve with Kognifai IoT Platform?
 
@@ -32,8 +32,8 @@ Kognifai IoT platform enables you to:
 - Make data available for processing in cloud analytics applications
 - Use the data from the edge directly in your on-premise applications via the API's exposed by the Kognifai cloud solutions
 - Monitor edge installations for intrusion attempts
-- Deploy storage, calculation and presentation capabilities at the Edge
-    - it is possible to deploy the same storage and presentation tools both in the cloud and at the edge
+- Deploy storage, calculation, and presentation capabilities at the Edge
+    - it is possible to deploy both the storage and presentation tools in the cloud and at the Edge
 - Reduce bandwidth usage between edge locations and cloud due to the very efficient data compression methods used by the Kognifai IoT Platform.
 
 ## Part and Parcel of Kognifai IoT platform
@@ -41,23 +41,27 @@ Kognifai IoT platform enables you to:
 The Kognifai IoT platform is comprised of the following parts:
 
 ### Edge gateway
-Edge gateway connects the edge devices with the cloud and transfers your data securely to the cloud. If the internet connection is un-available, the edge-gateway will buffer data locally, and re-transmit once the internet connection is re-established. The Edge gateway comes with a set of integrated connectors which can be used to connect using common protocols such as for example OPC DA and OPC U/A.  The Edge gateway does also host endpoints to which third parties can send data which they want sent to the cloud. A connector SDK is also available for clients to write custom connectors which will send data to the Edge gateway.
+Edge gateway connects the edge devices with the cloud and transfers your data securely to the cloud. If the internet connection is unavailable, the Edge gateway buffers data locally, and retransmits once the internet connection is reestablished. The Edge gateway comes with a set of integrated connectors which can be used to connect the common protocols such as OPC DA and OPC U/A.  The Edge gateway hosts endpoints to which third parties can send data (which they want to sent to the cloud). A connector SDK is also available for clients to write custom connectors which send data to the Edge gateway.
 
 ### IoT device connectors
-The Kognifai Edge gateway comes with a set of integrated connectors to connect to common source systems. In addition it is possible to build your own device connectors using the Kognifai Connector SDK. 
+
+Kognifai Edge gateway comes with a set of integrated connectors to connect to the common source systems. In addition, it is possible to build your own device connectors using the Kognifai Connector SDK. 
 
 ### Reliable and secure transport
-The Kognifai Edge gateway will encrypt the data that is sent to the cloud and all communication with the cloud happens in a secure manner. The Edge gateway solution is also buffering data and in the event of a loss of the internet connection, data will be re-sent to the cloud when the connection comes back up. 
 
+Kognifai Edge gateway encrypts data and sends  the data and all communications to the cloud in a secure manner. The Edge gateway solution buffers data whenever the internet connection is uavailable and retransmits the data once the internet connection is reestablished.
 
 ### IoT Cloud dispatcher
-The IOT gateway ensures connectivity by serving as an adapter between devices and instruments in the field and on the cloud services. It relays messages from the IoT hub/Event hub to the correct recipients on the cloud side. The Kognifai IoT Cloud dispatcher does also make it possible to send messages back to specific edge installations from the cloud in a secure manner.
+
+IOT gateway ensures connectivity by acting as an adapter between devices and instruments in the field and on the cloud services. It relays messages from the IoT hub/Event hub to the correct recipients on the cloud side. The Kognifai IoT Cloud dispatcher makes it possible to send messages securely back to the specific edge installations from the cloud.
 
 ### Storage
+
 This is the layer in which the IoT data is stored and retrieved. The Kognifai Storage Solution can be deployed both at the edge and in the cloud. 
 
 ### Presentation
-The Kognifai Application Framework provides a powerful visualization platform. It can be deployed both at the edge and in the cloud, and user interface (UI), in the industrial design field of human–computer interaction, is the space where interactions between humans and machines occur. Kognifai provides strong out-of-the-box collection of data visualization applications such as dashboard, trends, reports, data export and event analytics, supporting various customer IoT cases.
+
+The Kognifai Application Framework provides a powerful visualization platform. It can be deployed at the edge, in the cloud, in the user interface (UI), in the industrial design field of human–computer interaction which is the space where interactions between humans and machines occur. Kognifai provides strong out-of-the-box collection of data visualization applications such as dashboard, trends, reports, data export and event analytics, and supports various customer IoT cases.
 
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -74,9 +78,6 @@ See also:
 - [Connector SDK](SDK%20Documentation/Kognifai%20Connector%20SDK%20Overview.md)
 - [Support for low bandwidth scenarios](IoT%20Documentation/Support%20for%20low%20bandwidth%20scenarios.md)
 --------------------------------------------------------------------------------------------------------------------------
-
-
-
 
 
 
