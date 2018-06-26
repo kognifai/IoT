@@ -353,9 +353,21 @@ namespace M2MqttExampleClient
                     if (pressedKey.Key == ConsoleKey.D7)
                     {
                         client.Subscribe(new[] { Topics.TransmitLists }, new[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
-                        Console.WriteLine("Subscribed for transmit lists");
+                        RemoteSourceRequestConfiguredSensors message = new RemoteSourceRequestConfiguredSensors() { EventType = EventType.SensorDataEventType, SourceId = "Source1" };
+#if NET_FRAMEWORK40
+                        MessageWrapper wrap = new MessageWrapper();
+                        wrap.SubprotocolNumber = (int)KnownSubprotocols.EdgeGatewayProtocol;
+                        wrap.SubprotocolMessageType = (int)EdgeGatewayMessageType.RemoteSourceRequestConfiguredSensorsMessageType;
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            Serializer.Serialize<RemoteSourceRequestConfiguredSensors>(ms, message);
+                            wrap.MessageBytes = ms.ToArray();
+                        }
+#else
+                        var wrap = message.ToMessageWrapper();
+#endif
+                        client.Publish(Topics.SensorDataTransmitList, wrap.ToByteArray(), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
                     }
-
                 }
                 catch (Exception e)
                 {
@@ -375,7 +387,12 @@ namespace M2MqttExampleClient
 #if NET_FRAMEWORK40
             using (var stream = new MemoryStream(message.Message))
             {
-                TransmitListReplicationMessage transmitList = Serializer.Deserialize<TransmitListReplicationMessage>(stream);
+                MessageWrapper messageWrapper = Serializer.Deserialize<MessageWrapper>(stream);
+                using (MemoryStream wrapperStream = new MemoryStream(messageWrapper.MessageBytes))
+                {
+                    TransmitListReplicationMessage transmitList = Serializer.Deserialize<TransmitListReplicationMessage>(wrapperStream);
+                }
+
             }
 #else
                 TransmitListReplicationMessage transmitList = TransmitListReplicationMessage.Parser.ParseFrom(message.Message);
