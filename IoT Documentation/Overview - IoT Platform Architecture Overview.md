@@ -2,7 +2,7 @@
 
 The Kognifai IoT Platform consists of a series of edge and cloud side components:
 
-![](Images/Kognifai%20Iot%20Platform%20-%20platform%20overview.png?raw=true)
+![](.%20IoTImages/Kognifai%20Iot%20Platform%20-%20platform%20overview.png?raw=true)
 
 
 ## Edge Component 

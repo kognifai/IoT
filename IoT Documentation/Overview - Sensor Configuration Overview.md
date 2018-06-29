@@ -5,7 +5,7 @@ In the Kognifai IoT platform there are multiple ways sensor data can be limited.
 In the Kognifai IoT platform the source systems will send a list of available sensors to the cloud. The data owner will use the Sensor Configuration Application in the cloud  to configure a list of replicated sensors. This is a subset of the sensors which we want to stream to the cloud.
 
 
-![Sensor list exchange](Images/Kognifai%20IoT%20Platform%20-%20Sensor%20list%20exchange.png?raw=true)
+![Sensor list exchange](.%20IoTImages/Kognifai%20IoT%20Platform%20-%20Sensor%20list%20exchange.png?raw=true)
 
 There are several variants of this workflow at the Edge:
 

@@ -9,7 +9,7 @@ Kognifai Edge Gateway supports two types of connectors; Integrated Connectors an
 In this section, you will learn about these two types of connectors and how they are different with each other.
 
 The following figure illustrates the Kognifai Connectors:
-![](https://github.com/kognifai/IoT_Documentation/blob/master/IoT_Images/Kognifai%20Connectors%20.png?raw=true)
+![](.%20IoTImages/Kognifai%20Connectors%20.png?raw=true)
 
 ## Integrated connectors
 Integrated connectors are part of the Kognifai Edge software build. They work as clients to consume data from third party systems for example OPC DA or OPC U/A servers. Integrated connectors can be managed and re-configured from a remote location.
