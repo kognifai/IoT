@@ -24,7 +24,7 @@ The protobuf schema that describes the objects used by the Kognifai Edge gateway
 
 Here is the Protobuf Schema explained through following figure:
 
-![](Images/Kognifai%20Protbuf.png?raw=true)
+![](. IoT_Images/Kognifai%20Protbuf.png?raw=true)
 
 - In order to optimize the bandwidth utilization for the solution and to simplify message flow, a set of messages from the Edge gateway are grouped together.
 - Each of the messages are serialized to a byte array and inserted into a “MessageWrapper”. 
@@ -41,5 +41,5 @@ For more information on Protocol Buffers, refer:: https://developers.google.com/
 - Timeseries data will use subprotocol 0.
 - Within each subprotocol each message type will have a unique message number, which can then be used for more fine-grained message routing within a message handler for that sub protocol in the cloud.
 
-![](Images/Protobuf%20Schema.png?raw=true)
+![](. IoT_Images/Protobuf%20Schema.png?raw=true)
 
