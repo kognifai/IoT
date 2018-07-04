@@ -10,14 +10,7 @@ After reading this article you will get to know about:
 
 
 --------------------------------------------------------------------------------------------------------------------------
-### See also:
-- [Working with the connector SDK](Working%20with%20Connector%20SDK.md)
-- [Serialization](Serialization.md)
-- [Serialize timestamp and value](Serialize%20Timestamp%20and%20Value.md)
-- [Serialize an alarm](Serialize%20an%20Alarm.md)
-- [Send Serialized data to the edge gateway](Send%20Serialized%20data%20to%20the%20Edge%20Gateway.md)
 
---------------------------------------------------------------------------------------------------------------------------
 The following figure depicts the Kognifai Connector SDK that includes "Kognifai-  Edge, Kognifai- Data Processing Analytics and Management",  and "Presentation & Enterprise connectivity":
 
 ![](.%20IoT_Images/PlatformRefArch.png?raw=true)
@@ -60,3 +53,12 @@ In order for the messages to be understood by the edge gateway, they must be ser
 The use of this functionality is illustrated in the [sample code](https://github.com/kognifai/IoT/tree/master/.IoT%20Samples/M2MqttExampleClient.sln)
 - It is recommended to send the list of available sensors to the MQTT endpoint on start-up of your connector and then subsequently every 24 hours.
 - The MQTT endpoint does also have a topic where it publishes the list of sensors to be replicated to the cloud. It is not required to use this in your custom connector. However, if you are performing CPU intensive load per sensor you stream to the MQTT endpoint, you may optimize the dataflow by only sending data from sensors which will be sent to the cloud.
+-------------------------------------------------------------------------------------------------------------------------
+### See also:
+- [Working with the connector SDK](Working%20with%20Connector%20SDK.md)
+- [Serialization](Serialization.md)
+- [Serialize timestamp and value](Serialize%20Timestamp%20and%20Value.md)
+- [Serialize an alarm](Serialize%20an%20Alarm.md)
+- [Send Serialized data to the edge gateway](Send%20Serialized%20data%20to%20the%20Edge%20Gateway.md)
+
+--------------------------------------------------------------------------------------------------------------------------
