@@ -1,6 +1,6 @@
 Welcome to IoT_Documentation! 
 
-Explore these pages to know more about **IoT** and **Edge Connectors**. 
+Explore these pages to know more about **IoT Edge Connectors**. 
 
 
 In this section, we talk about:
@@ -15,7 +15,9 @@ In this section, we talk about:
 
 # What is IoT ?    [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
-Internet of things (IoT) is the inter-networking of physical devices, vehicles, buildings, and other items embedded with electronics, software, sensors, actuators, and network connectivity that enable them to collect and exchange data. IoT Platforms form the basis for development of scalable IoT applications and services that connect the real and virtual world between those physical devices, systems and people. Kognifai IoT platform includes software running at the edge, integrating the edge systems with the cloud, and also \the tools in the cloud required to securely manage your edge installations in a safe and secure manner.
+Internet of things (IoT) is the inter-networking of physical devices, vehicles, buildings, and other items embedded with electronics, software, sensors, actuators, and network connectivity that enable them to collect and exchange data. 
+
+IoT Platforms form the basis for development of scalable IoT applications and services that connect the real and virtual world between those physical devices, systems and people. Kognifai IoT platform includes software running at the edge, integrating the edge systems with the cloud, and also \the tools in the cloud required to securely manage your edge installations in a safe and secure manner.
 
 ## What can you achieve with Kognifai IoT Platform?
 
