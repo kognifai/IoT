@@ -11,7 +11,7 @@ After reading this article you will get to know about:
 
 --------------------------------------------------------------------------------------------------------------------------
 
-The following figure depicts the Kognifai Connector SDK that includes "Kognifai-  Edge, Kognifai- Data Processing Analytics and Management,  and "Presentation & Enterprise connectivity.
+The following figure depicts the Kognifai Connector SDK that includes "Kognifai-  Edge, Kognifai- Data Processing Analytics and Management,  and Presentation & Enterprise connectivity.
 
 ![](.%20IoT_Images/PlatformRefArch.png?raw=true)
 
