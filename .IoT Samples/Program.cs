@@ -339,34 +339,46 @@ namespace M2MqttExampleClient
                         var applicationPath = AppDomain.CurrentDomain.BaseDirectory;
                         string filePath = Path.Combine(applicationPath, "GatewayConfigurationFiles", "availablesensorlist.csv");
                         var sensors = CsvFileReader.ReadDataFromCsvFile(filePath);
-                        AvailableSensorListReplicationMessage availableSensors = new AvailableSensorListReplicationMessage();
-                        availableSensors.ConnectorType = "Mqtt";
-                        availableSensors.SourceName = "source1";
+                        RemoteSourceAvailableSensors availableSensors = new RemoteSourceAvailableSensors()
+                        {
+                            EventType = EventType.SensorDataEventType,
+                            SourceId = "source1"
+                        };
                         availableSensors.Sensors.AddRange(sensors);
+#if NET_FRAMEWORK40
+                        MessageWrapper messageWrapper = new MessageWrapper();
+                        messageWrapper.SubprotocolNumber = (int)KnownSubprotocols.EdgeGatewayProtocol;
+                        messageWrapper.SubprotocolMessageType = (int)EdgeGatewayMessageType.RemoteSourceAvailableSensorsMessageType;
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            Serializer.Serialize(ms, availableSensors);
+                            messageWrapper.MessageBytes = ms.ToArray();
+                        }
+#else
                         var messageWrapper = availableSensors.ToMessageWrapper();
+#endif
+
                         client.Publish(Topics.AvailableSensorList, messageWrapper.ToByteArray(), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
                         Console.WriteLine("Published available sensor list");
                     }
-                    /*send available sensors
-                     * Place your avaialablesensor.csv file under GatewayConfigurationFiles folder
-                     */
+
                     if (pressedKey.Key == ConsoleKey.D7)
                     {
                         client.Subscribe(new[] { Topics.TransmitLists }, new[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
                         RemoteSourceRequestConfiguredSensors message = new RemoteSourceRequestConfiguredSensors() { EventType = EventType.SensorDataEventType, SourceId = "Source1" };
 #if NET_FRAMEWORK40
-                        MessageWrapper wrap = new MessageWrapper();
-                        wrap.SubprotocolNumber = (int)KnownSubprotocols.EdgeGatewayProtocol;
-                        wrap.SubprotocolMessageType = (int)EdgeGatewayMessageType.RemoteSourceRequestConfiguredSensorsMessageType;
+                        MessageWrapper messageWrapper = new MessageWrapper();
+                        messageWrapper.SubprotocolNumber = (int)KnownSubprotocols.EdgeGatewayProtocol;
+                        messageWrapper.SubprotocolMessageType = (int)EdgeGatewayMessageType.RemoteSourceRequestConfiguredSensorsMessageType;
                         using (MemoryStream ms = new MemoryStream())
                         {
-                            Serializer.Serialize<RemoteSourceRequestConfiguredSensors>(ms, message);
-                            wrap.MessageBytes = ms.ToArray();
+                            Serializer.Serialize(ms, message);
+                            messageWrapper.MessageBytes = ms.ToArray();
                         }
 #else
-                        var wrap = message.ToMessageWrapper();
+                        var messageWrapper = message.ToMessageWrapper();
 #endif
-                        client.Publish(Topics.SensorDataTransmitList, wrap.ToByteArray(), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+                        client.Publish(Topics.SensorDataTransmitList, messageWrapper.ToByteArray(), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
                     }
                 }
                 catch (Exception e)
