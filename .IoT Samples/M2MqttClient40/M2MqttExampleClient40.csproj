@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CsvHelper" Version="2.9.1" />
-    <PackageReference Include="Kognifai.Edge.Serialization" Version="2.0.0-rc0002" />
+    <PackageReference Include="Kognifai.Edge.Serialization" Version="2.0.0" />
     <PackageReference Include="Kognifai.M2Mqtt" Version="1.1.0-rc0001" />
   </ItemGroup>
   <ItemGroup>
