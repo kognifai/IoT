@@ -26,7 +26,7 @@ Kognifai IoT platform enables you to:
     - Support for a growing number of source system protocols such as for example OPC DA, OPC UA, Modbus TCP, NMEA and so on.
     - Connector SDK is available for the clients to build their own Connectors for proprietary source systems.
 
-- Remotely configure the Kongsberg Edge system in a safe and secure manner
+- Remotely configure & upgrade the Kognifai Edge system in a safe and secure manner
 - Manage a fleet of Edge installations from the cloud in an efficient manner
 - Transport data to and from the cloud in a reliable manner
 - Buffer data locally at the Edge when the internet connection is down
@@ -45,7 +45,7 @@ The Kognifai IoT platform is comprised of the following parts:
 ### Edge gateway
 Edge gateway connects the edge devices with the cloud and transfers your data securely to the cloud. If the internet connection is unavailable, the Edge gateway buffers data locally, and retransmits once the internet connection is reestablished. The Edge gateway comes with a set of integrated connectors which can be used to connect the common protocols such as OPC DA and OPC U/A.  The Edge gateway hosts endpoints to which third parties can send data (which they want to sent to the cloud). A connector SDK is also available for clients to write custom connectors which send data to the Edge gateway.
 
-### IoT device connectors
+### IoT connectors
 
 Kognifai Edge gateway comes with a set of integrated connectors to connect to the common source systems. In addition, it is possible to build your own device connectors using the Kognifai Connector SDK. 
 
@@ -53,17 +53,10 @@ Kognifai Edge gateway comes with a set of integrated connectors to connect to th
 
 Kognifai Edge gateway encrypts data and sends  the data and all communications to the cloud in a secure manner. The Edge gateway solution buffers data whenever the internet connection is uavailable and retransmits the data once the internet connection is reestablished.
 
-### IoT Cloud dispatcher
-
-IOT gateway ensures connectivity by acting as an adapter between devices and instruments in the field and on the cloud services. It relays messages from the IoT hub/Event hub to the correct recipients on the cloud side. The Kognifai IoT Cloud dispatcher makes it possible to send messages securely back to the specific edge installations from the cloud.
-
 ### Storage
 
-This is the layer in which the IoT data is stored and retrieved. The Kognifai Storage Solution can be deployed both at the edge and in the cloud. 
+This is the layer in which the IoT data is stored and retrieved. 
 
-### Presentation
-
-The Kognifai Application Framework provides a powerful visualization platform. It can be deployed at the edge, in the cloud, in the user interface (UI), in the industrial design field of human–computer interaction which is the space where interactions between humans and machines occur. Kognifai provides strong out-of-the-box collection of data visualization applications such as dashboard, trends, reports, data export and event analytics, and supports various customer IoT cases.
 
 
 --------------------------------------------------------------------------------------------------------------------------
