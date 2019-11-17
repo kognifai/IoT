@@ -23,7 +23,7 @@ IoT Platform forms a base for development of scalable IoT applications and servi
 
 Kognifai IoT platform enables you to:
 - Connect to a wide variety of source systems
-    - Support for a growing number of source systems such as OPC DA, OPC UA and so on.
+    - Support for a growing number of source system protocols such as for example OPC DA, OPC UA, Modbus TCP, NMEA and so on.
     - Connector SDK is available for the clients to build their own Connectors for proprietary source systems.
 
 - Remotely configure the Kongsberg Edge system in a safe and secure manner
