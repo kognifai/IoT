@@ -17,7 +17,7 @@ connection is up again.
 
 ![Edge Gateway Distribution with MQTT Endpoint](.%20IoTImages/Kgnifai%20Edge%20Gateway%20Distribution%20with%20MQTT%20endpoint.png?raw=true)
 
-The above figure shows a deployment where the connector SDK has used to write a custom/standalone connector, which talks to the Edge gateway over MQTT and sends packages serialized with protobuf. The Reliable transfer component will then transfer this data to the cloud.
+The above figure shows a deployment where the connector SDK has used to write a custom external connector, which talks to the Edge gateway over MQTT and sends packages serialized with protobuf. The Reliable transfer component will then transfer this data to the cloud.
 
 The components:
 

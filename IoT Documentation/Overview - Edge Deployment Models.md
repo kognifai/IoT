@@ -2,10 +2,8 @@
 
 Edge installations can be deployed in various configurations, depending on client requirements:
 
-- A deployment can incorporate an edge gateway, a full storage solution, stream analytics and application framework /viewer.  
-- Most edge installations are more lightweight, and will only include the edge gateway. The Edge gateway will buffer sensor data and forward it to the cloud solution.
-
-  ![Edge Deployment Model](.%20IoTImages/Edge%20Deployment.png)
+- A deployment can incorporate an edge gateway, a full storage solution, a set of containers with application funcitionality etc
+- The system can be deployed both on windows and linux. Containers are only supported on linux.
 
 There are several variants of how a lightweight edge solution might be deployed:
 

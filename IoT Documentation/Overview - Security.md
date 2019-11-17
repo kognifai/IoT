@@ -20,7 +20,7 @@ All of the connections between the edge devices is run over encrypted channels (
 Edge devices will be locked down, and functionality such as for example boot from USB will be disabled for un-authorized users.
 
 # Monitor edge installations
-The edge software contains functionality for streaming of edge system logs to the cloud for security inspection. This makes it possible
+The edge software contains functionality for streaming of edge system logs to the cloud for security inspection. This makes it possible to monitor the edge for security incidents.
 
 # Secure storage of secrets in the cloud
 Any secret information in the cloud will be stored in a HSM device (Azure Vault)

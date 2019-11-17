@@ -16,7 +16,7 @@ There are several variants of this workflow at the Edge:
 - The integrated connector will change the list of sensors it subscribes or polls based on the newly received list from the cloud
 
 ## Connector SDK with MQTT endpoint and edge gateway filtering
-- In this workflow the user has written a custom connector which lives within the control system zone of the network. This connector uses the connector SDK to talk to the MQTT endpoint of the edge gateway.
+- In this workflow the user has written a custom external connector which lives within the control system zone of the network. This connector uses the connector SDK to talk to the MQTT endpoint of the edge gateway.
 - The connector will send a list of available sensors to the MQTT endpoint
 (there is a separate MQTT topic for this)
 - The edge gateway will send this list of available sensors to the cloud 
@@ -25,7 +25,7 @@ There are several variants of this workflow at the Edge:
 - The filter and dispatch component of the edge gateway will filter the incoming sensor data, dropping data from sensors that are not part of the sensor replication list
 
 ## Connector SDK with MQTT endpoint and filtering in the connector
-- In this workflow the user has written a custom connector which lives within the control system zone of the network. This connector uses the connector SDK to talk to the MQTT endpoint of the edge gateway.
+- In this workflow the user has written a custom external connector which lives within the control system zone of the network. This connector uses the connector SDK to talk to the MQTT endpoint of the edge gateway.
 - The connector will send a list of available sensors to the MQTT endpoint
 (there is a separate MQTT topic for this)
 - The edge gateway will send this list of available sensors to the cloud 

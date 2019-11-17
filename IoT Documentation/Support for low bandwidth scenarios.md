@@ -9,7 +9,6 @@ It is quite common for IoT equipment to be deployed in remote locations with poo
 It is also important that the solution we deploy in the field is resilient and will continue to work in case the internet connection is lost: 
 
 - The Kognifai Edge gateway will buffer data to disk and resume transmission once the network is up.
-- When the network is up the Kognifai Edge gateway will stream data via azure blob storage for direct bulk ingest into cloud storage solutions. This offers a  cost efficient and robust mechanism to upload data gathered while the internet connection was down.
 
-## Configurable transports
+## Pluggable transports
 The cost of various IoT transport and cloud ingest solutions is in constant development. The Kognifai Edge solution employs a pluggable transport design, which will make it possible to adapt to future changes in this area. We currently use Azure Event hubs for telemetry data, which offers a cost efficient solution.
