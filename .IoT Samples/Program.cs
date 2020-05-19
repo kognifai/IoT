@@ -32,6 +32,9 @@ using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 using Kognifai.Mqtt;
 using System.IO;
+using System.Configuration;
+using System.Linq;
+
 #if NET_FRAMEWORK40
 using ProtoBuf;
 #else
@@ -83,13 +86,15 @@ namespace M2MqttExampleClient
                         task.Wait(cancel.Token);
                     }
                     Console.WriteLine("### Connecting to the server ###");
-                    client.Connect(clientId);
+                    client.Connect(clientId, GetQualityOfService(ConfigurationManager.AppSettings["qualityofservice"]));
                     Console.WriteLine("### M2MQTT Client connected and ready ### ");
                 }
                 catch (Exception ex)
                 {
                     if ((ex is OperationCanceledException) || cancel.IsCancellationRequested)
+                    {
                         break;
+                    }
 
                     Console.WriteLine("### Connecting to the server failed retrying in 5s ###");
                     isReconnect = true;
@@ -99,7 +104,9 @@ namespace M2MqttExampleClient
         private static void ConnectionClosed(object sender, EventArgs e)
         {
             if (cancel.IsCancellationRequested)
+            {
                 return;
+            }
 
             /* reconnect to the server */
             Console.WriteLine("### Disconnected from server, reconnecting in 5 seconds.... ###");
@@ -162,10 +169,10 @@ namespace M2MqttExampleClient
                         {
                             DateTimeOffset time = DateTimeOffset.Now.AddYears(0);
 
-                            TimeseriesDoublesReplicationMessage tds = new TimeseriesDoublesReplicationMessage("TimeSeries01", "TimeSeries01", time, Math.Sin(Math.PI / 180 * i));
+                            TimeseriesDoublesReplicationMessage tds = new TimeseriesDoublesReplicationMessage("TimeSeries01", "source1", time, Math.Sin(Math.PI / 180 * i));
                             var messageWrpper = tds.ToMessageWrapper();
-                            client.Publish(Topics.CloudBound, messageWrpper.ToByteArray(), MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, false);
-                            var delay = Delay(1);
+                            client.Publish(Topics.CloudBound, messageWrpper.ToByteArray(), GetQualityOfService(ConfigurationManager.AppSettings["qualityofservice"]), false);
+                            var delay = Delay(800);
                             delay.Wait();
                         }
                         Console.WriteLine("Sent time series messages");
@@ -178,9 +185,13 @@ namespace M2MqttExampleClient
                         alarmOnOff = !alarmOnOff;
 
                         if (alarmOnOff)
+                        {
                             alarmState = AlarmStateType.AlarmState;
+                        }
                         else
+                        {
                             alarmState = AlarmStateType.NormalState;
+                        }
 
                         var alarm = new AlarmReplicationMessage
                         {
@@ -193,7 +204,7 @@ namespace M2MqttExampleClient
                             "Info level, Normal state");
                         alarm.AlarmEvents.Add(aEv);
                         var messageWrapper = alarm.ToMessageWrapper();
-                        client.Publish(Topics.CloudBound, messageWrapper.ToByteArray(), MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, false);
+                        client.Publish(Topics.CloudBound, messageWrapper.ToByteArray(), GetQualityOfService(ConfigurationManager.AppSettings["qualityofservice"]), false);
                         var delay = Delay(10);
                         delay.Wait();
                         Console.WriteLine("Sent alarm message");
@@ -214,7 +225,7 @@ namespace M2MqttExampleClient
                             state);
                         stateChanged.StateChanges.Add(sEv);
                         var messageWrapper = stateChanged.ToMessageWrapper();
-                        client.Publish(Topics.CloudBound, messageWrapper.ToByteArray(), MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, false);
+                        client.Publish(Topics.CloudBound, messageWrapper.ToByteArray(), GetQualityOfService(ConfigurationManager.AppSettings["qualityofservice"]), false);
                         state++;
                         Console.WriteLine("Sent state change message");
                     }
@@ -231,9 +242,14 @@ namespace M2MqttExampleClient
                             int count = 0;
                             double value;
                             if (toggleCosSin)
+                            {
                                 value = Math.Sin(Math.PI / 180 * i);
+                            }
                             else
+                            {
                                 value = Math.Cos(Math.PI / 180 * i);
+                            }
+
                             samples.Add(value);
                             count++;
                         }
@@ -243,7 +259,7 @@ namespace M2MqttExampleClient
 
                         DataframeReplicationMessage samplesetReplicationMessage = new DataframeReplicationMessage("SampleSet01", "SampleSet01", dataFrame);
                         var messageWrapper = samplesetReplicationMessage.ToMessageWrapper();
-                        client.Publish(Topics.CloudBound, messageWrapper.ToByteArray(), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+                        client.Publish(Topics.CloudBound, messageWrapper.ToByteArray(), GetQualityOfService(ConfigurationManager.AppSettings["qualityofservice"]), false);
                         Console.WriteLine("Sent sample set message");
                     }
 
@@ -325,7 +341,7 @@ namespace M2MqttExampleClient
                             delay.Wait();
                         }
                         MessageArrayContainer container = new MessageArrayContainer("", array, true);
-                        client.Publish(Topics.CloudBoundContainer, container.ToByteArray(), MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, false);
+                        client.Publish(Topics.CloudBoundContainer, container.ToByteArray(), GetQualityOfService(ConfigurationManager.AppSettings["qualityofservice"]), false);
 
                         Console.WriteLine("Sent cloudBoundContainer messages");
                     }
@@ -338,34 +354,45 @@ namespace M2MqttExampleClient
                     {
                         var applicationPath = AppDomain.CurrentDomain.BaseDirectory;
                         string filePath = Path.Combine(applicationPath, "GatewayConfigurationFiles", "availablesensorlist.csv");
-                        var sensors = CsvFileReader.ReadDataFromCsvFile(filePath);
+
                         RemoteSourceAvailableSensors availableSensors = new RemoteSourceAvailableSensors()
                         {
                             EventType = EventType.SensorDataEventType,
                             SourceId = "source1"
                         };
-                        availableSensors.Sensors.AddRange(sensors);
+
 #if NET_FRAMEWORK40
+                        var availableSensorsList = AvailableSensor.GetAvailableSensors(availableSensors.SourceId, EventType.SensorDataEventType, filePath);
                         MessageWrapper messageWrapper = new MessageWrapper();
                         messageWrapper.SubprotocolNumber = (int)KnownSubprotocols.EdgeGatewayProtocol;
                         messageWrapper.SubprotocolMessageType = (int)EdgeGatewayMessageType.RemoteSourceAvailableSensorsMessageType;
+                        availableSensors.Sensors.AddRange(availableSensorsList.Sensors);
                         using (MemoryStream ms = new MemoryStream())
                         {
                             Serializer.Serialize(ms, availableSensors);
                             messageWrapper.MessageBytes = ms.ToArray();
-                        }
+                        }                        
 #else
-                        var messageWrapper = availableSensors.ToMessageWrapper();
+                        MessageWrapper messageWrapper = AvailableSensor.GetAvailableSensors(availableSensors.SourceId, EventType.SensorDataEventType, filePath);
 #endif
 
-                        client.Publish(Topics.AvailableSensorList, messageWrapper.ToByteArray(), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+                        client.Publish(Topics.AvailableSensorList, messageWrapper.ToByteArray(), GetQualityOfService(ConfigurationManager.AppSettings["qualityofservice"]), false);
                         Console.WriteLine("Published available sensor list");
                     }
 
                     if (pressedKey.Key == ConsoleKey.D7)
                     {
-                        client.Subscribe(new[] { Topics.TransmitLists }, new[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
-                        RemoteSourceRequestConfiguredSensors message = new RemoteSourceRequestConfiguredSensors() { EventType = EventType.SensorDataEventType, SourceId = "Source1" };
+                        var applicationPath = AppDomain.CurrentDomain.BaseDirectory;
+                        string filePath = Path.Combine(applicationPath, "GatewayConfigurationFiles", "availablesensorlist.csv");
+
+                        RemoteSourceRequestConfiguredSensors message = new RemoteSourceRequestConfiguredSensors()
+                        {
+                            EventType = EventType.SensorDataEventType,
+                            SourceId = "source1"
+                        };
+
+                        client.Subscribe(new[] { Topics.TransmitLists }, new[] { GetQualityOfService(ConfigurationManager.AppSettings["qualityofservice"]) });
+
 #if NET_FRAMEWORK40
                         MessageWrapper messageWrapper = new MessageWrapper();
                         messageWrapper.SubprotocolNumber = (int)KnownSubprotocols.EdgeGatewayProtocol;
@@ -376,9 +403,11 @@ namespace M2MqttExampleClient
                             messageWrapper.MessageBytes = ms.ToArray();
                         }
 #else
-                        var messageWrapper = message.ToMessageWrapper();
+                           var messageWrapper = message.ToMessageWrapper();
 #endif
-                        client.Publish(Topics.SensorDataTransmitList, messageWrapper.ToByteArray(), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+                        client.Publish(Topics.SensorDataTransmitList, messageWrapper.ToByteArray(), GetQualityOfService(ConfigurationManager.AppSettings["qualityofservice"]), false);
+                        Console.WriteLine("Published sensor transmit list");
+
                     }
                 }
                 catch (Exception e)
@@ -388,6 +417,7 @@ namespace M2MqttExampleClient
             }
             cancel.Dispose();
         }
+
 
         private static void ApplicationMessageReceived(object sender, MqttMsgPublishEventArgs message)
         {
@@ -407,9 +437,34 @@ namespace M2MqttExampleClient
 
             }
 #else
-                TransmitListReplicationMessage transmitList = TransmitListReplicationMessage.Parser.ParseFrom(message.Message);
+            TransmitListReplicationMessage transmitList = TransmitListReplicationMessage.Parser.ParseFrom(message.Message);
 #endif
             Console.WriteLine("Received transmit list");
+        }
+
+        private static byte GetQualityOfService(string qos)
+        {
+            var qualityOfService = new byte();
+            if (qos == QualityOfService.AtMostOnce.ToString())
+            {
+                qualityOfService = (byte)QualityOfService.AtMostOnce;
+            }
+            else if (qos == QualityOfService.AtLeastOnce.ToString())
+            {
+                qualityOfService = (byte)QualityOfService.AtLeastOnce;
+            }
+            else if (qos == QualityOfService.ExactlyOnce.ToString())
+            {
+                qualityOfService = (byte)QualityOfService.ExactlyOnce;
+            }
+            return qualityOfService;
+        }
+
+        private enum QualityOfService
+        {
+            AtMostOnce,
+            AtLeastOnce,
+            ExactlyOnce
         }
 
     }
